@@ -1,0 +1,20 @@
+{
+  "name": "prospero-types",
+  "version": "1.0.0",
+  "description": "Type descriptions for documents and schemas used in Prospero.",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "tsc --noEmit --strict src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cloudinary": "^1.41.0",
+    "firebase-admin": "^11.11.0",
+    "stripe": "^14.3.0",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3"
+  }
+}
