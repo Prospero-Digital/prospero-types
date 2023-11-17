@@ -1,7 +1,7 @@
 import type { DiscordGroup } from './discord';
-import type { Permissions as GroupPermissions } from './permissions';
+import type { Permissions } from './permissions';
 
-export { GroupPermissions };
+export type GroupVariant = 'group' | 'bundle' | 'assignment';
 
 export type GroupUsage = {
   storage?: number;
@@ -14,8 +14,9 @@ export type Group = {
   attributes?: {
     alias?: string;
   };
-  variant: 'group' | 'bundle' | 'assignment';
+  variant: GroupVariant;
   parent?: string;
+  parents?: string[];
   name: string;
   producerId?: string;
   producerName?: string;
@@ -24,6 +25,7 @@ export type Group = {
   permissions?: Permissions;
   url?: string;
   discord?: DiscordGroup;
+  usage?: GroupUsage;
 };
 
 export type GroupPrivate = Group & {

@@ -3,6 +3,7 @@ export type ScriptWriterScene = {
   title?: string;
   template: 'scriptWriter';
   actors?: string[];
+  includeRoot?: boolean;
   characterNames?: string[];
   initialLines?: string[];
   maxLines?: number;

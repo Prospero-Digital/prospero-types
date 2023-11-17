@@ -1,4 +1,5 @@
 import type { Actor } from './actors';
+import type { Character } from './characters';
 import type { Variable } from './variables';
 import type { Action } from './actions';
 import type { Trigger } from './triggers';
@@ -11,11 +12,16 @@ export type Start = Node & {
   type: 'start';
 };
 
+export type RenderNode = Start | Scene | Action | Trigger;
+
 export type SectionType = 'start' | 'scene' | 'action' | 'trigger';
 
 export type Render = {
   actors: {
     [key: string]: Actor;
+  };
+  characters: {
+    [key: string]: Character;
   };
   variables: {
     [key: string]: Variable;
@@ -24,6 +30,6 @@ export type Render = {
     [key: string]: GenreScene;
   };
   nodes: {
-    [key: string]: Start | Scene | Action | Trigger;
+    [key: string]: RenderNode;
   };
 };

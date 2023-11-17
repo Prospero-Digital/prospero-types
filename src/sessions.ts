@@ -36,7 +36,7 @@ export type Session = {
 };
 
 export type SessionPrivate = {
-  id?: string;
+  id: 'root';
   groupId: string;
   producerId: string;
   title: string;
@@ -52,16 +52,24 @@ export type SessionHistory = {
   };
 };
 
+export type SessionAllocatedActor = {
+  name: string;
+  members: string[];
+  fulfilled?: boolean;
+};
+
+export type SessionParticipant = {
+  name: string;
+  avatar?: Media;
+};
+
 export type SessionShared = SessionHistory & {
-  id?: string;
+  id: 'root';
   assignmentId?: string;
+  createdAt: Date;
   description?: string;
   allocatedActors: {
-    [key: string]: {
-      name: string;
-      members: string[];
-      fulfilled?: boolean;
-    };
+    [key: string]: SessionAllocatedActor;
   };
   calibrating?: boolean;
   code: string;
@@ -75,10 +83,7 @@ export type SessionShared = SessionHistory & {
   history?: SessionHistory[];
   groupId: string;
   participants: {
-    [key: string]: {
-      name: string;
-      avatar?: Media;
-    };
+    [key: string]: SessionParticipant;
   };
   playing: boolean;
   producerId: string;

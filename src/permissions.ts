@@ -8,6 +8,7 @@ export type Permissions = {
       video?: boolean;
       youtube?: boolean;
       googleMaps?: boolean;
+      googleMapsDirections?: boolean;
     };
   };
   smartscripts?: {

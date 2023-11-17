@@ -1,5 +1,5 @@
 export type Node = {
-  id: string;
+  id?: string;
   to: string[];
   actorId: string;
 };

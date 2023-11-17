@@ -28,7 +28,7 @@ import {
   EmailRenderProps,
 } from './email';
 
-import { GroupPermissions, GroupUsage, Group, GroupPrivate } from './groups';
+import { GroupUsage, Group, GroupPrivate } from './groups';
 
 import {
   MediaUsedType,
@@ -49,7 +49,7 @@ import {
 
 import { MsTeamsMeta, MsTeamsDoc } from './msteams';
 import { Permissions } from './permissions';
-import { ProducerPermissions, Producer } from './producers';
+import { Producer } from './producers';
 
 import { Render } from './render';
 
@@ -97,7 +97,6 @@ export type {
   EmailRenderProps,
   EmailTemplate,
   Group,
-  GroupPermissions,
   GroupPrivate,
   GroupUsage,
   Media,
@@ -118,7 +117,6 @@ export type {
   MsTeamsMeta,
   Permissions,
   Producer,
-  ProducerPermissions,
   Render,
   Session,
   SessionHistory,

@@ -6,6 +6,7 @@ export type UserConsent = {
 };
 
 export type User = {
+  avatarUrl?: string;
   authenticated?: boolean;
   consent?: UserConsent;
   devices?: string[];

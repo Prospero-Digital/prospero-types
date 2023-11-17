@@ -1,7 +1,5 @@
-import type { Media } from './media';
-import type { Permissions as ProducerPermissions } from './permissions';
-
-export { ProducerPermissions };
+import type { MediaImage } from './media';
+import type { Permissions } from './permissions';
 
 export type Producer = {
   id?: string;
@@ -10,13 +8,17 @@ export type Producer = {
   attributes?: {
     alias?: string;
   };
-  avatar?: Media;
+  avatar?: MediaImage;
+  description?: string;
+  headerImage?: MediaImage;
   customerId?: string;
   groupId?: string;
-  permissions?: ProducerPermissions;
+  permissions?: Permissions;
   subscriptionId?: string;
   userId?: string;
   media?: {
     storage?: number;
   };
+  bundleOrder?: string[];
+  stripeAccountActive?: boolean;
 };

@@ -27,7 +27,7 @@ export type ActionAction = ActionDefaults & {
     direction?: 'row' | 'column';
   };
   characterId?: string;
-  position?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+  position?: number;
   size?: 'small' | 'medium' | 'large';
   align?: 'left' | 'center' | 'right';
   invert?: boolean;
@@ -36,7 +36,8 @@ export type ActionAction = ActionDefaults & {
 
 export type ActionActor = Omit<ActionAction, 'type'> & {
   type: 'actor';
-  actors: string[];
+  actors?: string[];
+  includeRoot?: boolean;
 };
 
 export type ActionEnd = ActionDefaults & {
@@ -68,10 +69,16 @@ export type ActionVariable = ActionDefaults & {
   action?: 'set' | 'calculate' | 'reset' | 'request';
 };
 
+export type ActionDecision = Omit<ActionActor, 'type'> & {
+  type: 'decision';
+  display?: boolean;
+};
+
 export type Action =
   | ActionAction
   | ActionActor
   | ActionEnd
   | ActionJumpTo
   | ActionRandom
-  | ActionSoundtrack;
+  | ActionSoundtrack
+  | ActionDecision;

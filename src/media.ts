@@ -10,14 +10,16 @@ export type MediaResourceType =
   | 'googleMaps'
   | 'googleMapsDirections';
 
+export type MediaUsedIn = {
+  [key: string]: {
+    count: number;
+    type: MediaUsedType;
+  };
+};
+
 type MediaFile = Partial<Omit<UploadApiResponse, 'resource_type'>> & {
   resource_type: MediaResourceType;
-  usedIn?: {
-    [key: string]: {
-      count: number;
-      type: MediaUsedType;
-    };
-  };
+  usedIn?: MediaUsedIn;
 };
 
 export type MediaStreamingProps = {
@@ -36,14 +38,16 @@ export type MediaGoogleMapsProps = {
   travelMode?: 'DRIVING' | 'WALKING' | 'BICYCLING' | 'TRANSIT' | 'line';
 };
 
+export type MediaImageCrop = {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+};
+
 export type MediaImage = Omit<MediaFile, 'resource_type'> & {
   resource_type: 'image';
-  crop?: {
-    x: number;
-    y: number;
-    width: number;
-    height: number;
-  };
+  crop?: MediaImageCrop;
 };
 
 export type MediaVideo = Omit<MediaFile, 'resource_type'> &
@@ -64,10 +68,17 @@ export type MediaYoutube = Omit<MediaFile, 'resource_type'> &
     resource_type: 'youtube';
   };
 
-type LatLng = {
+export type MediaGoogleMapsLongLatLng = {
+  latitude: number;
+  longitude: number;
+};
+
+export type MediaGoogleMapsLatLng = {
   lat: number;
   lng: number;
 };
+
+type LatLng = MediaGoogleMapsLatLng | MediaGoogleMapsLongLatLng;
 
 export type MediaGoogleMap = MediaGoogleMapsProps & {
   resource_type: 'googleMaps';

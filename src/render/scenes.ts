@@ -6,6 +6,7 @@ export type SceneType = 'web' | 'custom' | 'live' | 'continue';
 
 export type SceneDefaults = Node & {
   section: 'scene';
+  title?: string;
 };
 
 export type SceneWeb = SceneDefaults & {
