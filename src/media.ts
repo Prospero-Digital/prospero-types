@@ -1,6 +1,6 @@
 import type { UploadApiResponse } from 'cloudinary';
 
-export type MediaUsedType = 'smartscripts' | 'assignments';
+export type MediaUsedType = 'smartscripts' | 'assignments' | 'sessions';
 export type MediaFileType = 'image' | 'video' | 'raw' | 'auto';
 export type MediaUploadType = 'image' | 'video' | 'audio';
 

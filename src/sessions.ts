@@ -1,5 +1,5 @@
-import { type Variable } from './render/variables';
-import { type Media } from './media';
+import type { Variable } from './render/variables';
+import type { Media } from './media';
 
 export type SessionStatus = 'created' | 'started' | 'completed';
 
@@ -64,7 +64,7 @@ export type SessionParticipant = {
 };
 
 export type SessionShared = SessionHistory & {
-  id: 'root';
+  id?: 'root';
   assignmentId?: string;
   createdAt: Date;
   description?: string;
@@ -91,7 +91,11 @@ export type SessionShared = SessionHistory & {
   started: boolean;
   thumbnail?: Media;
   title: string;
+  variables?: {
+    [key: string]: any;
+  };
   updatedAt?: Date;
   userId: string;
   userName?: string;
+  userEmail?: string;
 };
