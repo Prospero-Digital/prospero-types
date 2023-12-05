@@ -94,6 +94,7 @@ export type MediaGoogleMapDirections = MediaGoogleMapsProps & {
   public_id: string;
   from?: { latlng?: LatLng; name?: string };
   to?: { latlng?: LatLng; name?: string };
+  path?: string;
   directions?: string;
 };
 
