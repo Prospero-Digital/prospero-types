@@ -78,7 +78,7 @@ export type MediaGoogleMapsLatLng = {
   lng: number;
 };
 
-type LatLng = MediaGoogleMapsLatLng | MediaGoogleMapsLongLatLng;
+export type LatLng = MediaGoogleMapsLatLng | MediaGoogleMapsLongLatLng;
 
 export type MediaGoogleMap = MediaGoogleMapsProps & {
   resource_type: 'googleMaps';
