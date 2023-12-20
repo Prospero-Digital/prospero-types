@@ -1,4 +1,4 @@
-import type { Media, MediaImage } from '../media';
+import type { Media, MediaAudio, MediaImage } from '../media';
 
 export type PoseTrack =
   | 'all'
@@ -22,6 +22,7 @@ export type PoseArea = {
   color?: string;
   text?: string;
   duration?: number;
+  sound?: MediaAudio;
 };
 
 export type PoseScene = {

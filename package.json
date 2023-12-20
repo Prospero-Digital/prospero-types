@@ -12,7 +12,7 @@
     "cloudinary": "^1.41.0",
     "firebase-admin": "^11.11.0",
     "stripe": "^14.3.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.3"
   },
   "devDependencies": {
     "prettier": "^3.0.3"
