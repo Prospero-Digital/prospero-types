@@ -7,6 +7,7 @@ export type MediaUploadType = 'image' | 'video' | 'audio';
 export type MediaResourceType =
   | MediaUploadType
   | 'youtube'
+  | 'vimeo'
   | 'googleMaps'
   | 'googleMapsDirections';
 
@@ -68,6 +69,11 @@ export type MediaYoutube = Omit<MediaFile, 'resource_type'> &
     resource_type: 'youtube';
   };
 
+export type MediaVimeo = Omit<MediaFile, 'resource_type'> &
+  MediaStreamingProps & {
+    resource_type: 'vimeo';
+  };
+
 export type MediaGoogleMapsLongLatLng = {
   latitude: number;
   longitude: number;
@@ -104,5 +110,6 @@ export type Media =
   | MediaVideo
   | MediaAudio
   | MediaYoutube
+  | MediaVimeo
   | MediaGoogleMap
   | MediaGoogleMapDirections;
