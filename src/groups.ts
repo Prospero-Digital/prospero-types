@@ -26,6 +26,7 @@ export type Group = {
   url?: string;
   discord?: DiscordGroup;
   usage?: GroupUsage;
+  theme?: string;
 };
 
 export type GroupPrivate = Group & {
