@@ -19,6 +19,7 @@ export type Smartscript = {
   notes?: string;
   createdAt: Date;
   thumbnail?: Media;
+  themeId?: string;
 };
 
 export type SmartscriptPrivate = {
