@@ -31,6 +31,7 @@ export type Bundle = {
   producerName?: string;
   producerAvatar?: MediaImage;
   smartscriptIds: string[];
+  themeId?: string;
   thumbnail?: Media;
   title: string;
   userId: string;

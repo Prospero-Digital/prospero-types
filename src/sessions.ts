@@ -25,6 +25,7 @@ export type Session = {
   smartscriptId: string;
   thumbnail?: Media;
   status: SessionStatus;
+  themeId?: string;
   userId: string;
   updatedAt?: Date;
   userName?: string;

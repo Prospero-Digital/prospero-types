@@ -15,6 +15,7 @@ export type Producer = {
   groupId?: string;
   permissions?: Permissions;
   subscriptionId?: string;
+  themeId?: string;
   userId?: string;
   media?: {
     storage?: number;
