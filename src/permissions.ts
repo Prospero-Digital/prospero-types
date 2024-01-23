@@ -7,6 +7,7 @@ export type Permissions = {
       image?: boolean;
       video?: boolean;
       youtube?: boolean;
+      vimeo?: boolean;
       googleMaps?: boolean;
       googleMapsDirections?: boolean;
     };
