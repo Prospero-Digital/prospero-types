@@ -27,6 +27,7 @@ export type Group = {
   discord?: DiscordGroup;
   usage?: GroupUsage;
   themeId?: string;
+  groupType?: 'education' | 'school' | 'class';
 };
 
 export type GroupPrivate = Group & {
