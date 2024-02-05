@@ -32,6 +32,7 @@ export type ActionAction = ActionDefaults & {
   align?: 'left' | 'center' | 'right';
   invert?: boolean;
   sticky?: boolean;
+  opacity?: number;
 };
 
 export type ActionActor = Omit<ActionAction, 'type'> & {
