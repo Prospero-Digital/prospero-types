@@ -49,6 +49,7 @@ export type MediaImageCrop = {
 export type MediaImage = Omit<MediaFile, 'resource_type'> & {
   resource_type: 'image';
   crop?: MediaImageCrop;
+  alt?: string;
 };
 
 export type MediaVideo = Omit<MediaFile, 'resource_type'> &
