@@ -28,6 +28,7 @@ export type Group = {
   usage?: GroupUsage;
   themeId?: string;
   groupType?: 'education' | 'school' | 'class';
+  bundleIds?: string[];
 };
 
 export type GroupPrivate = Group & {
