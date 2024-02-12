@@ -21,6 +21,7 @@ export type Permissions = {
       coreVariables?: boolean;
       inputVariables?: boolean;
       geolocation?: boolean;
+      transparency?: boolean;
       frames?: boolean;
       liveScenes?: boolean;
       ['genre:pose']?: boolean;

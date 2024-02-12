@@ -33,6 +33,7 @@ export type ActionAction = ActionDefaults & {
   invert?: boolean;
   sticky?: boolean;
   opacity?: number;
+  blur?: boolean;
 };
 
 export type ActionActor = Omit<ActionAction, 'type'> & {
