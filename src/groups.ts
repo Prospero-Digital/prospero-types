@@ -14,6 +14,9 @@ export type Group = {
   attributes?: {
     alias?: string;
   };
+  meta?: {
+    [key: string]: any;
+  };
   variant: GroupVariant;
   parent?: string;
   parents?: string[];
