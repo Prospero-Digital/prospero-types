@@ -31,7 +31,7 @@ export type Group = {
   teams?: string;
   usage?: GroupUsage;
   themeId?: string;
-  groupType?: 'education' | 'school' | 'class';
+  groupType?: 'education' | 'school' | 'class' | 'microsoft' | 'google';
   bundleIds?: string[];
 };
 
