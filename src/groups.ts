@@ -29,6 +29,7 @@ export type Group = {
   url?: string;
   discord?: DiscordGroup;
   teams?: string;
+  workspace?: string;
   usage?: GroupUsage;
   themeId?: string;
   groupType?: 'education' | 'school' | 'class' | 'microsoft' | 'google';
