@@ -5,16 +5,22 @@ type Dashboard = {
   id?: string;
   type: DashboardType;
   action: DashboardAction;
-  docId: string;
-  secondaryDocId?: string;
-  primary: string;
-  secondary?: string;
-  primaryThumbnail?: MediaImage;
-  secondaryThumbnail?: MediaImage;
+  date: Date;
+  primary: {
+    id: string;
+    title: string;
+    description?: string;
+    thumbnail?: MediaImage;
+  };
+  secondary?: {
+    id: string;
+    title: string;
+    description?: string;
+    thumbnail?: MediaImage;
+  };
   userId: string;
   groupId: string;
   producerId: string;
-  timestamp: number;
 };
 
 export default Dashboard;
