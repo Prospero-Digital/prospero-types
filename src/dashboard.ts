@@ -6,7 +6,11 @@ type Dashboard = {
   type: DashboardType;
   action: DashboardAction;
   docId: string;
-  title: string;
+  secondaryDocId?: string;
+  primary: string;
+  secondary?: string;
+  primaryThumbnail?: MediaImage;
+  secondaryThumbnail?: MediaImage;
   userId: string;
   groupId: string;
   producerId: string;
