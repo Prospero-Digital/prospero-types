@@ -20,6 +20,8 @@ import type {
   DiscordGroup,
 } from './discord';
 
+import type Dashboard from './dashboard';
+
 import type {
   EmailTemplate,
   EmailProps,
@@ -87,6 +89,7 @@ export type {
   BasketCheckoutProps,
   Bundle,
   BundleAttributes,
+  Dashboard,
   DateType,
   DiscordAction,
   DiscordCollection,
