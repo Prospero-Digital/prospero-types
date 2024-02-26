@@ -1,5 +1,5 @@
 export type DashboardType = 'smartscript' | 'bundle' | 'assignment' | 'session';
-export type DashboardAction = 'add' | 'edit' | 'play' | 'view';
+export type DashboardAction = 'edit' | 'play' | 'view';
 
 type Dashboard = {
   id?: string;
