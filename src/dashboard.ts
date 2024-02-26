@@ -6,7 +6,7 @@ type Dashboard = {
   type: DashboardType;
   action: DashboardAction;
   docId: string;
-  title?: string;
+  title: string;
   userId: string;
   groupId: string;
   producerId: string;
