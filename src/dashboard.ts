@@ -5,7 +5,7 @@ type Dashboard = {
   id?: string;
   type: DashboardType;
   action: DashboardAction;
-  date: Date;
+  date: Date | number;
   primaryId: string;
   primaryTitle: string;
   primaryDescription?: string;
