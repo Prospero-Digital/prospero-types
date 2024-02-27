@@ -1,7 +1,7 @@
 import type { Variable } from './render/variables';
 import type { Media } from './media';
 
-export type SessionStatus = 'created' | 'started' | 'completed';
+export type SessionStatus = 'expired' | 'created' | 'started' | 'completed';
 
 export type Session = {
   id?: string;
