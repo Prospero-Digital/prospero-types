@@ -1,3 +1,4 @@
+import type { MediaImage } from './media';
 export type DashboardType = 'smartscript' | 'bundle' | 'assignment' | 'session';
 export type DashboardAction = 'edit' | 'play' | 'view';
 
