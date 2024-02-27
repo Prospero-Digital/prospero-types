@@ -6,18 +6,14 @@ type Dashboard = {
   type: DashboardType;
   action: DashboardAction;
   date: Date;
-  primary: {
-    id: string;
-    title: string;
-    description?: string;
-    thumbnail?: MediaImage;
-  };
-  secondary?: {
-    id: string;
-    title: string;
-    description?: string;
-    thumbnail?: MediaImage;
-  };
+  primaryId: string;
+  primaryTitle: string;
+  primaryDescription?: string;
+  primaryThumbnail?: MediaImage;
+  secondaryId?: string;
+  secondaryTitle?: string;
+  secondaryDescription?: string;
+  secondaryThumbnail?: MediaImage;
   userId: string;
   groupId: string;
   producerId: string;
