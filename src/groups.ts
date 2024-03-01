@@ -3,10 +3,16 @@ import type { Permissions } from './permissions';
 
 export type GroupVariant = 'group' | 'bundle' | 'assignment';
 
+export type GroupUsageStatus = 'available' | 'exceeded' | 'nearingQuota';
 export type GroupUsage = {
   storage?: number;
   tokens?: number;
   seats?: number;
+  status?: {
+    storage?: GroupUsageStatus;
+    tokens?: GroupUsageStatus;
+    seats?: GroupUsageStatus;
+  };
 };
 
 export type Group = {
