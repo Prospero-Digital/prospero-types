@@ -15,6 +15,7 @@ export type Smartscript = {
     playCount?: number;
     extension?: boolean;
     participants?: number;
+    target?: '_blank' | '_self' | '_parent' | '_top';
   };
   notes?: string;
   createdAt: Date;
