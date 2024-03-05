@@ -23,6 +23,7 @@ export type Session = {
   producerAvatar?: Media;
   notes?: string;
   smartscriptId: string;
+  target?: '_blank' | '_self';
   thumbnail?: Media;
   status: SessionStatus;
   themeId?: string;
@@ -92,6 +93,7 @@ export type SessionShared = SessionHistory & {
   started: boolean;
   thumbnail?: Media;
   title: string;
+  target?: '_blank' | '_self';
   variables?: {
     [key: string]: any;
   };
