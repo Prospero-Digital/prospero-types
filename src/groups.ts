@@ -40,6 +40,10 @@ export type Group = {
   themeId?: string;
   groupType?: 'education' | 'school' | 'class' | 'microsoft' | 'google';
   bundleIds?: string[];
+  subject?: string;
+  message?: string;
+  notify?: boolean;
+  html?: string;
 };
 
 export type GroupPrivate = Group & {
