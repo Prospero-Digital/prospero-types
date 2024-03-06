@@ -1,5 +1,6 @@
 import type { Variable } from './render/variables';
 import type { Media } from './media';
+import type { MsTeamsMeta } from './msteams';
 
 export type SessionStatus = 'expired' | 'created' | 'started' | 'completed';
 
@@ -35,6 +36,7 @@ export type Session = {
   title: string;
   msUserId?: string;
   msUserName?: string;
+  msteams?: MsTeamsMeta;
 };
 
 export type SessionPrivate = {
