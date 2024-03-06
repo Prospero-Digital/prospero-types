@@ -5,6 +5,8 @@ import type { Media } from './media';
 
 export type MsTeamsMeta = {
   deepLink?: string;
+  channelName?: string;
+  teamName?: string;
 };
 
 export type MsTeamsDoc = {
