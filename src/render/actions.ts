@@ -16,21 +16,29 @@ type ActionDefaults = Node & {
   section: 'action';
 };
 
+export type ActionActionButtonVariant =
+  | 'text'
+  | 'outlined'
+  | 'contained'
+  | 'link';
+
+export type ActionActionButtonColor =
+  | 'alternate'
+  | 'primary'
+  | 'secondary'
+  | 'warning'
+  | 'info'
+  | 'error'
+  | 'success';
+
 export type ActionAction = ActionDefaults & {
   type: 'action';
   text?: string;
   media?: MediaUpload;
   buttons?: {
     labels?: string;
-    variant?: 'contained' | 'outlined' | 'text' | 'link';
-    color?:
-      | 'alternate'
-      | 'primary'
-      | 'secondary'
-      | 'warning'
-      | 'info'
-      | 'error'
-      | 'success';
+    variant?: ActionActionButtonVariant;
+    color?: ActionActionButtonColor;
     direction?: 'row' | 'column';
     hideCheckboxes?: boolean;
   };
