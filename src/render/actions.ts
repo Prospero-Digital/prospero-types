@@ -32,6 +32,7 @@ export type ActionAction = ActionDefaults & {
       | 'error'
       | 'success';
     direction?: 'row' | 'column';
+    hideCheckboxes?: boolean;
   };
   characterId?: string;
   position?: number;
