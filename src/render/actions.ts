@@ -22,8 +22,15 @@ export type ActionAction = ActionDefaults & {
   media?: MediaUpload;
   buttons?: {
     labels?: string;
-    variant?: 'contained' | 'outlined' | 'text';
-    color?: 'primary' | 'secondary' | 'inherit';
+    variant?: 'contained' | 'outlined' | 'text' | 'link';
+    color?:
+      | 'alternate'
+      | 'primary'
+      | 'secondary'
+      | 'warning'
+      | 'info'
+      | 'error'
+      | 'success';
     direction?: 'row' | 'column';
   };
   characterId?: string;
