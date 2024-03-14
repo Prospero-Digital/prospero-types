@@ -1,4 +1,4 @@
-import type { MediaImage } from './media';
+import type { MediaImage, MediaVideo } from './media';
 import type { Permissions } from './permissions';
 
 export type Producer = {
@@ -22,4 +22,5 @@ export type Producer = {
   };
   bundleOrder?: string[];
   stripeAccountActive?: boolean;
+  video?: MediaVideo;
 };
