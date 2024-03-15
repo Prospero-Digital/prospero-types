@@ -1,16 +1,30 @@
 import type { MediaImage, MediaVideo } from './media';
 import type { Permissions } from './permissions';
 
-export type Producer = {
+export type ChannelSection = {
+  title?: string;
+  description?: string;
+  bundleIds?: string[];
+  tags?: string[];
+  videos?: MediaVideo[];
+};
+
+export type Channel = {
+  avatar?: MediaImage;
+  description?: string;
+  headerImage?: MediaImage;
+  video?: MediaVideo;
+  bundleOrder?: string[];
+  sections?: ChannelSection[];
+};
+
+export type Producer = Channel & {
   id?: string;
   name: string;
   active?: boolean;
   attributes?: {
     alias?: string;
   };
-  avatar?: MediaImage;
-  description?: string;
-  headerImage?: MediaImage;
   customerId?: string;
   groupId?: string;
   permissions?: Permissions;
@@ -20,7 +34,5 @@ export type Producer = {
   media?: {
     storage?: number;
   };
-  bundleOrder?: string[];
   stripeAccountActive?: boolean;
-  video?: MediaVideo;
 };

@@ -1,5 +1,6 @@
 import type { DiscordGroup } from './discord';
 import type { Permissions } from './permissions';
+import { Channel } from './producers';
 
 export type GroupVariant = 'group' | 'bundle' | 'assignment';
 
@@ -40,6 +41,7 @@ export type Group = {
   themeId?: string;
   groupType?: 'education' | 'school' | 'class' | 'microsoft' | 'google';
   bundleIds?: string[];
+  channel?: Channel;
   subject?: string;
   message?: string;
   notify?: boolean;
