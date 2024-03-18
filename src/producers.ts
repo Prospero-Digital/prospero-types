@@ -12,6 +12,7 @@ export type ChannelSection = {
   title?: string;
   description?: string;
   headerImage?: MediaImage;
+  video?: MediaVideo;
   avatar?: MediaImage;
   variant: ChannelSectionVariant;
   bundleIds?: string[];
