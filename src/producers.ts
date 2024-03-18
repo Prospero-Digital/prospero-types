@@ -11,6 +11,8 @@ export type ChannelSectionVariant =
 export type ChannelSection = {
   title?: string;
   description?: string;
+  headerImage?: MediaImage;
+  avatar?: MediaImage;
   variant: ChannelSectionVariant;
   bundleIds?: string[];
   tags?: string[];
