@@ -1,7 +1,12 @@
 import type { MediaImage, MediaVideo } from './media';
 import type { Permissions } from './permissions';
 
-export type ChannelSectionVariant = 'videos' | 'bundles' | 'tags' | 'published';
+export type ChannelSectionVariant =
+  | 'videos'
+  | 'bundles'
+  | 'tags'
+  | 'published'
+  | 'overview';
 
 export type ChannelSection = {
   title?: string;
