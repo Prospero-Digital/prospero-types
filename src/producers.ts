@@ -4,7 +4,7 @@ import type { Permissions } from './permissions';
 export type ChannelSectionVariant =
   | 'videos'
   | 'bundles'
-  | 'tags'
+  | 'tag'
   | 'published'
   | 'overview';
 
@@ -18,6 +18,7 @@ export type ChannelSection = {
   bundleIds?: string[];
   tag?: string;
   videos?: MediaVideo[];
+  id: string;
 };
 
 export type Channel = {
