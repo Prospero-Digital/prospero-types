@@ -5,6 +5,7 @@ export type BundleAttributes = Partial<{
   alias: string;
   channel: boolean;
   guest: boolean;
+  group?: boolean;
   hasShared: number;
   library: boolean;
   members: number;
