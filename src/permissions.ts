@@ -32,6 +32,7 @@ export type Permissions = {
       weblink?: boolean;
       library?: boolean;
       channel?: boolean;
+      group?: boolean;
       user?: boolean;
     };
     sell?: boolean;
