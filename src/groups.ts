@@ -41,7 +41,7 @@ export type Group = {
   themeId?: string;
   groupType?: 'education' | 'school' | 'class' | 'microsoft' | 'google';
   bundleIds?: string[];
-  channel?: Channel;
+  sections?: Channel;
   subject?: string;
   message?: string;
   notify?: boolean;
