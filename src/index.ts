@@ -50,7 +50,6 @@ import type {
   Media,
 } from './media';
 
-import type { MsTeamsMeta, MsTeamsDoc } from './msteams';
 import type { Permissions } from './permissions';
 import type { Producer } from './producers';
 
@@ -118,8 +117,6 @@ export type {
   MediaVideo,
   MediaVimeo,
   MediaYoutube,
-  MsTeamsDoc,
-  MsTeamsMeta,
   Permissions,
   Producer,
   Render,

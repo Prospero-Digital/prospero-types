@@ -1,7 +1,6 @@
 import type { Variable } from './render/variables';
 import type { MediaImage } from './media';
 import type { DateType as Date } from './common';
-import type { MsTeamsMeta } from './msteams';
 
 type CsvExport = {
   order: string[];
@@ -35,7 +34,6 @@ export type Assignment = {
   thumbnail?: MediaImage;
   assignmentGroupId?: string;
   export?: AssignmentExport;
-  msteams?: MsTeamsMeta;
 };
 
 export type AssignmentProgressMembers = {
