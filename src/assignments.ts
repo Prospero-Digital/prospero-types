@@ -28,6 +28,7 @@ export type Assignment = {
   attributes?: {
     alias?: string;
     published?: boolean;
+    link?: boolean;
   };
   createdAt?: Date;
   deadline?: Date;
