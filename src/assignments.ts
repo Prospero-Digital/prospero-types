@@ -13,6 +13,8 @@ export type AssignmentExport = Partial<{ [key: string]: any }> &
     type?: AssignmentExportTypes;
   };
 
+export type StudentIdVariant = 'fullName' | 'email' | 'id';
+
 export type Assignment = {
   id?: string;
   title: string;
@@ -35,6 +37,7 @@ export type Assignment = {
   thumbnail?: MediaImage;
   assignmentGroupId?: string;
   export?: AssignmentExport;
+  studentIdVariant?: StudentIdVariant;
 };
 
 export type AssignmentProgressMembers = {
