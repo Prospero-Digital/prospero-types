@@ -91,6 +91,7 @@ export type SessionShared = SessionHistory & {
   producerId: string;
   smartscriptId: string;
   started: boolean;
+  studentId?: string;
   thumbnail?: Media;
   title: string;
   target?: '_blank' | '_self';
