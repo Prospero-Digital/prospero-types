@@ -7,8 +7,9 @@ export type Session = {
   id?: string;
   assignmentId?: string;
   assignmentTitle?: string;
-  bundleId: string;
-  bundleTitle: string;
+  assignmentThumbnail?: Media;
+  bundleId?: string;
+  bundleTitle?: string;
   bundleThumbnail?: Media;
   code: string;
   createdAt: Date;
