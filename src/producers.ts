@@ -37,6 +37,8 @@ export type Producer = Channel & {
   attributes?: {
     alias?: string;
   };
+  icon?: MediaImage;
+  logo?: MediaImage;
   customerId?: string;
   groupId?: string;
   permissions?: Permissions;

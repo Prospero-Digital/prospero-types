@@ -57,6 +57,7 @@ export type Permissions = {
   };
   admin?: {
     manage: boolean;
+    branding?: boolean;
     channel?: boolean;
     chat?: boolean;
     analytics?: boolean;
