@@ -1,4 +1,5 @@
 import type { DiscordGroup } from './discord';
+import type { MediaImage } from './media';
 import type { Permissions } from './permissions';
 import { Channel } from './producers';
 
@@ -30,6 +31,8 @@ export type Group = {
   name: string;
   producerId?: string;
   producerName?: string;
+  icon?: MediaImage;
+  logo?: MediaImage;
   members: string[];
   children?: string[];
   permissions?: Permissions;
