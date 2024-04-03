@@ -6,7 +6,7 @@ type CsvExport = {
   order: string[];
 };
 
-export type AssignmentExportType = 'csv';
+export type AssignmentExportType = 'csv' | 'smartscripts';
 
 export type AssignmentExport = Partial<{ [key: string]: any }> &
   Partial<CsvExport> & {
