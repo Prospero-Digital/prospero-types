@@ -6,11 +6,11 @@ type CsvExport = {
   order: string[];
 };
 
-export type AssignmentExportTypes = 'csv';
+export type AssignmentExportType = 'csv';
 
 export type AssignmentExport = Partial<{ [key: string]: any }> &
   Partial<CsvExport> & {
-    type?: AssignmentExportTypes;
+    type?: AssignmentExportType;
   };
 
 export type StudentIdVariant = 'fullName' | 'email' | 'id';
