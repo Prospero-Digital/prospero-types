@@ -1,5 +1,5 @@
 import type {
-  AssignmentExportTypes,
+  AssignmentExportType,
   AssignmentExport,
   Assignment,
   AssignmentProgressMembers,
@@ -78,7 +78,7 @@ import type { UserConsent, User } from './users';
 export type {
   Assignment,
   AssignmentExport,
-  AssignmentExportTypes,
+  AssignmentExportType,
   AssignmentProgress,
   AssignmentProgressMembers,
   AssignmentProgressProgress,
