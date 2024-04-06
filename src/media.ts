@@ -73,6 +73,7 @@ export type MediaYoutube = Omit<MediaFile, 'resource_type'> &
 export type MediaVimeo = Omit<MediaFile, 'resource_type'> &
   MediaStreamingProps & {
     resource_type: 'vimeo';
+    hProp?: string;
   };
 
 export type MediaGoogleMapsLongLatLng = {
