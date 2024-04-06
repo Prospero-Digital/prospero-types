@@ -13,7 +13,7 @@ export type AssignmentExport = Partial<{ [key: string]: any }> &
     type?: AssignmentExportType;
   };
 
-export type StudentIdVariant = 'fullName' | 'email' | 'id';
+export type StudentIdVariant = 'username' | 'id';
 
 export type Assignment = {
   id?: string;
