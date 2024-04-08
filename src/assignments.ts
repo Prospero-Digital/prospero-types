@@ -41,7 +41,7 @@ export type Assignment = {
 };
 
 export type AssignmentProgressMembers = {
-  [key: string]: {
+  [memberId: string]: {
     email?: string;
     name?: string;
     updatedAt: Date;
@@ -51,19 +51,21 @@ export type AssignmentProgressMembers = {
 export type AssignmentProgressStatus = 'created' | 'started' | 'completed';
 
 export type AssignmentProgressProgress = {
-  [key: string]: {
-    [key: string]: {
+  [smartscriptId: string]: {
+    [memberId: string]: {
       status: AssignmentProgressStatus;
-      [key: string]: any;
+      variables: {
+        [variableId: string]: any;
+      };
     };
   };
 };
 
 export type AssignmentProgressSmartscripts = {
-  [key: string]: {
+  [smartscriptId: string]: {
     title: string;
     variables: {
-      [key: string]: Variable;
+      [variableId: string]: Variable;
     };
   };
 };
