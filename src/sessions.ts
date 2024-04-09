@@ -85,7 +85,7 @@ export type SessionShared = SessionHistory & {
   history?: SessionHistory[];
   groupId: string;
   participants: {
-    [participantId: string]: SessionParticipant;
+    [userId: string]: SessionParticipant;
   };
   playing: boolean;
   producerId: string;
