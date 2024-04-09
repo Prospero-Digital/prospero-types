@@ -53,6 +53,9 @@ export type Permissions = {
     manage: boolean;
     max?: number;
     members?: boolean;
+    groupTypes?: {
+      education?: boolean;
+    };
     level?: number;
   };
   admin?: {
