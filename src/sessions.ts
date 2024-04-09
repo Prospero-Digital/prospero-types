@@ -47,10 +47,10 @@ export type SessionPrivate = {
 
 export type SessionHistory = {
   active: {
-    [key: string]: string[];
+    [actorId: string]: string[];
   };
   variables: {
-    [key: string]: any;
+    [variableId: string]: any;
   };
 };
 
@@ -71,13 +71,13 @@ export type SessionShared = SessionHistory & {
   createdAt: Date;
   description?: string;
   allocatedActors: {
-    [key: string]: SessionAllocatedActor;
+    [actorId: string]: SessionAllocatedActor;
   };
   calibrating?: boolean;
   code: string;
   completed: boolean;
   definitions: {
-    [key: string]: Variable;
+    [variableId: string]: Variable;
   };
   expires?: Date;
   expiry: number;
@@ -85,7 +85,7 @@ export type SessionShared = SessionHistory & {
   history?: SessionHistory[];
   groupId: string;
   participants: {
-    [key: string]: SessionParticipant;
+    [participantId: string]: SessionParticipant;
   };
   playing: boolean;
   producerId: string;
@@ -96,7 +96,7 @@ export type SessionShared = SessionHistory & {
   title: string;
   target?: '_blank' | '_self';
   variables?: {
-    [key: string]: any;
+    [variableId: string]: any;
   };
   updatedAt?: Date;
   userId: string;
