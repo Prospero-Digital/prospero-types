@@ -31,15 +31,6 @@ export type VariableValue =
 export type Variable = {
   name: string;
   level: 'global' | 'actor' | 'user';
-  varType:
-    | 'text'
-    | 'number'
-    | 'bool'
-    | 'image'
-    | 'video'
-    | 'audio'
-    | 'googleMaps'
-    | 'googleMapsDirections'
-    | 'genres';
+  varType: VariableType;
   initialValue?: number;
 };
