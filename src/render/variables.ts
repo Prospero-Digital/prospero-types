@@ -8,6 +8,7 @@ import {
 
 export type VariableType =
   | 'text'
+  | 'textarea'
   | 'number'
   | 'bool'
   | 'image'
