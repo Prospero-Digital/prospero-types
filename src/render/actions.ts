@@ -16,6 +16,15 @@ type ActionDefaults = Node & {
   section: 'action';
 };
 
+type ActionActionTheme =
+  | 'default'
+  | 'message'
+  | 'news'
+  | 'videoCall'
+  | 'status'
+  | 'email'
+  | 'toolbar';
+
 export type ActionActionButtonVariant =
   | 'text'
   | 'outlined'
@@ -50,6 +59,7 @@ export type ActionAction = ActionDefaults & {
   sticky?: boolean;
   opacity?: number;
   blur?: boolean;
+  theme?: ActionActionTheme;
 };
 
 export type ActionActor = Omit<ActionAction, 'type'> & {
