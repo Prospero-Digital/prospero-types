@@ -8,6 +8,7 @@ export type WordPairsScene = {
   introBody?: string;
   label?: string;
   pairs: string[][];
+  template: 'wordPairs';
 };
 
 export type WordPairsCue = {
