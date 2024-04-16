@@ -10,6 +10,7 @@ export type QuestionnaireQuestionType =
 export type QuestionnaireQuestion = {
   id?: string;
   colName?: string;
+  label?: string;
   type?: QuestionnaireQuestionType;
   values?: string[];
   helperText?: string;
