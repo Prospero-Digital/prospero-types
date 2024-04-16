@@ -8,6 +8,8 @@ export type QuestionnaireQuestionType =
   | 'none';
 
 export type QuestionnaireQuestion = {
+  id?: string;
+  colName?: string;
   type?: QuestionnaireQuestionType;
   values?: string[];
   helperText?: string;
@@ -18,6 +20,7 @@ export type QuestionnaireQuestion = {
 };
 
 export type QuestionnaireSection = {
+  id?: string;
   label?: string;
   introduction?: string;
   questions: QuestionnaireQuestion[];
