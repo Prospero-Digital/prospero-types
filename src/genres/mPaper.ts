@@ -1,8 +1,8 @@
-import type { MediaImage, MediaVideo } from '../media';
+import type { Media } from '../media';
 
 export type MPaperContent = {
   text?: string;
-  media?: MediaImage | MediaVideo;
+  media?: Media;
   color?: string;
   fillScreen?: boolean;
 };
