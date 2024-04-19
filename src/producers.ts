@@ -17,7 +17,7 @@ export type ChannelSection = {
   variant: ChannelSectionVariant;
   bundleIds?: string[];
   tag?: string;
-  videoIds?: string[];
+  videoIds?: { video: string; tags?: string[] }[];
   id: string;
 };
 
