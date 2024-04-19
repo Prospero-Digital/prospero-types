@@ -18,6 +18,7 @@ export type ChannelSection = {
   bundleIds?: string[];
   tag?: string;
   videoIds?: { video: string; tags?: string[] }[];
+  search?: boolean;
   id: string;
 };
 
