@@ -69,6 +69,9 @@ export type Permissions = {
     superadmin?: boolean;
     permissions?: boolean;
     library?: boolean;
+    api?: {
+      educationGroup?: boolean;
+    };
   };
   [key: string]: any;
 };
