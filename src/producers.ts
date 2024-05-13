@@ -37,6 +37,7 @@ export type Producer = Channel & {
   active?: boolean;
   attributes?: {
     alias?: string;
+    token?: string;
   };
   icon?: MediaImage;
   logo?: MediaImage;
