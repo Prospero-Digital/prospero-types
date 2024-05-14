@@ -1,6 +1,10 @@
 import type { MediaImage, MediaVideo } from './media';
 import type { Permissions } from './permissions';
 
+export type ProducerApi = {
+  key: string;
+};
+
 export type ChannelSectionVariant =
   | 'videos'
   | 'bundles'
