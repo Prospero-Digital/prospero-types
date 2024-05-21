@@ -2,6 +2,7 @@ import type { MediaImage, MediaVideo } from './media';
 import type { Permissions } from './permissions';
 
 export type ProducerApi = {
+  token: string;
   [prefix: string]: string;
 };
 
@@ -41,8 +42,6 @@ export type Producer = Channel & {
   active?: boolean;
   attributes?: {
     alias?: string;
-    token?: string;
-    apiKey?: { [prefix: string]: string };
   };
   icon?: MediaImage;
   logo?: MediaImage;
