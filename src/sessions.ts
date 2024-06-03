@@ -1,5 +1,5 @@
 import type { Variable } from './render/variables';
-import type { Media } from './media';
+import type { MediaImage } from './media';
 
 export type SessionStatus = 'expired' | 'created' | 'started' | 'completed';
 
@@ -7,10 +7,10 @@ export type Session = {
   id?: string;
   assignmentId?: string;
   assignmentTitle?: string;
-  assignmentThumbnail?: Media;
+  assignmentThumbnail?: MediaImage;
   bundleId?: string;
   bundleTitle?: string;
-  bundleThumbnail?: Media;
+  bundleThumbnail?: MediaImage;
   code: string;
   createdAt: Date;
   expires?: Date;
@@ -21,11 +21,11 @@ export type Session = {
   groupName?: string;
   producerId: string;
   producerName?: string;
-  producerAvatar?: Media;
+  producerAvatar?: MediaImage;
   notes?: string;
   smartscriptId: string;
   target?: '_blank' | '_self';
-  thumbnail?: Media;
+  thumbnail?: MediaImage;
   status: SessionStatus;
   themeId?: string;
   userId: string;
@@ -62,7 +62,7 @@ export type SessionAllocatedActor = {
 
 export type SessionParticipant = {
   name: string;
-  avatar?: Media;
+  avatar?: MediaImage;
 };
 
 export type SessionShared = SessionHistory & {
@@ -92,7 +92,7 @@ export type SessionShared = SessionHistory & {
   smartscriptId: string;
   started: boolean;
   studentId?: string;
-  thumbnail?: Media;
+  thumbnail?: MediaImage;
   title: string;
   target?: '_blank' | '_self';
   variables?: {
