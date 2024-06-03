@@ -12,7 +12,7 @@ export type Session = {
   bundleTitle?: string;
   bundleThumbnail?: MediaImage;
   code: string;
-  complete?: boolean;
+  completed?: boolean;
   createdAt: Date;
   expires?: Date;
   expiry: number;
