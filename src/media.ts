@@ -115,6 +115,7 @@ export type Media =
   | MediaImage
   | MediaVideo
   | MediaAudio
+  | MediaPdf
   | MediaYoutube
   | MediaVimeo
   | MediaGoogleMap
