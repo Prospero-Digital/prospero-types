@@ -63,6 +63,10 @@ export type MediaAudio = Omit<MediaFile, 'resource_type'> &
     is_audio: true;
   };
 
+export type MediaPdf = Omit<MediaImage, 'format'> & {
+  format: 'pdf';
+};
+
 export type MediaUpload = MediaImage | MediaVideo | MediaAudio;
 
 export type MediaYoutube = Omit<MediaFile, 'resource_type'> &
