@@ -1,4 +1,4 @@
-import type { MediaImage, Media } from './media';
+import type { MediaImage, Media, MediaPdf } from './media';
 import { type DateType } from './common';
 
 export type BundleAttributes = Partial<{
@@ -20,6 +20,7 @@ export type Bundle = {
   coverImage?: Media;
   createdAt: DateType;
   description?: string;
+  docs?: MediaPdf[];
   expiry?: number;
   groupId: string;
   groupName?: string;
