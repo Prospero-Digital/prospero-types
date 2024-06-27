@@ -50,6 +50,7 @@ export type Producer = Channel & {
   permissions?: Permissions;
   subscriptionId?: string;
   themeId?: string;
+  support?: string;
   userId?: string;
   media?: {
     storage?: number;
