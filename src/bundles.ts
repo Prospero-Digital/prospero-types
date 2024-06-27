@@ -40,4 +40,9 @@ export type Bundle = {
   userId: string;
   userName?: string;
   video?: Media;
+  generated?: {
+    assignmentId?: string;
+    assignmentTitle?: string;
+    assignmentThumbnail?: MediaImage;
+  };
 };
