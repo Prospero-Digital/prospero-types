@@ -52,7 +52,12 @@ import type {
 } from './media';
 
 import type { Permissions } from './permissions';
-import type { Producer } from './producers';
+import type {
+  Producer,
+  Channel,
+  ChannelSection,
+  ChannelSectionVariant,
+} from './producers';
 
 import type { Render } from './render';
 
@@ -89,6 +94,9 @@ export type {
   BasketCheckoutProps,
   Bundle,
   BundleAttributes,
+  Channel,
+  ChannelSection,
+  ChannelSectionVariant,
   Dashboard,
   DateType,
   DiscordAction,
