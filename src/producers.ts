@@ -9,6 +9,7 @@ export type ProducerApi = {
 export type ChannelSectionVariant =
   | 'videos'
   | 'bundles'
+  | 'assignments'
   | 'tag'
   | 'published'
   | 'overview';
@@ -21,6 +22,7 @@ export type ChannelSection = {
   avatar?: MediaImage;
   variant: ChannelSectionVariant;
   bundleIds?: string[];
+  assignmentIds?: string[];
   tag?: string;
   videoIds?: { video: string; tags?: string[] }[];
   search?: boolean;
