@@ -31,6 +31,7 @@ export type Assignment = {
     alias?: string;
     published?: boolean;
     link?: boolean;
+    group?: boolean;
   };
   createdAt?: Date;
   deadline?: Date;
