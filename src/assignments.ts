@@ -6,7 +6,7 @@ type CsvExport = {
   order: string[];
 };
 
-export type AssignmentExportType = 'csv' | 'smartscripts';
+export type AssignmentExportType = 'csv' | 'smartscript';
 
 export type AssignmentExport = Partial<{ [key: string]: any }> &
   Partial<CsvExport> & {
@@ -32,6 +32,7 @@ export type Assignment = {
     published?: boolean;
     link?: boolean;
     group?: boolean;
+    channel?: boolean;
   };
   createdAt?: Date;
   deadline?: Date;
