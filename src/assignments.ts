@@ -23,6 +23,7 @@ export type Assignment = {
   producerId: string;
   producerName: string;
   smartscriptIds: string[];
+  producerAvatar?: MediaImage;
   groupId: string;
   groupName: string;
   members?: number;
