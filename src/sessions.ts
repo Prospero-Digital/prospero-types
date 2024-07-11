@@ -36,6 +36,10 @@ export type Session = {
   userAnonymous?: boolean;
   title: string;
   studentId?: string;
+  generated?: {
+    bundleId: string;
+    smartscriptTitle?: string;
+  };
 };
 
 export type SessionPrivate = {

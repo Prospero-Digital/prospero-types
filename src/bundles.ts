@@ -11,6 +11,7 @@ export type BundleAttributes = Partial<{
   members: number;
   prerelease: boolean;
   template: boolean;
+  generated?: boolean;
 }>;
 
 export type Bundle = {
