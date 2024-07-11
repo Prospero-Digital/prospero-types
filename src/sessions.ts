@@ -3,6 +3,11 @@ import type { MediaImage } from './media';
 
 export type SessionStatus = 'expired' | 'created' | 'started' | 'completed';
 
+export type SessionGenerated = {
+  bundleId: string;
+  smartscriptTitle?: string;
+};
+
 export type Session = {
   id?: string;
   assignmentId?: string;
@@ -36,10 +41,7 @@ export type Session = {
   userAnonymous?: boolean;
   title: string;
   studentId?: string;
-  generated?: {
-    bundleId: string;
-    smartscriptTitle?: string;
-  };
+  generated?: SessionGenerated;
 };
 
 export type SessionPrivate = {
@@ -89,6 +91,7 @@ export type SessionShared = SessionHistory & {
   extension?: boolean;
   history?: SessionHistory[];
   groupId: string;
+  generated?: SessionGenerated;
   participants: {
     [userId: string]: SessionParticipant;
   };
