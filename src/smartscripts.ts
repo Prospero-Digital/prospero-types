@@ -1,4 +1,4 @@
-import type { Media } from './media';
+import type { MediaImage } from './media';
 
 export type Smartscript = {
   id?: string;
@@ -19,7 +19,7 @@ export type Smartscript = {
   };
   notes?: string;
   createdAt: Date;
-  thumbnail?: Media;
+  thumbnail?: MediaImage;
   themeId?: string;
 };
 
