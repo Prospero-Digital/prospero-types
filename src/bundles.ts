@@ -1,4 +1,4 @@
-import type { MediaImage, Media, MediaPdf } from './media';
+import type { MediaImage, MediaVideo, MediaPdf } from './media';
 import { type DateType } from './common';
 
 export type BundleAttributes = Partial<{
@@ -18,7 +18,7 @@ export type Bundle = {
   id?: string;
   attributes?: BundleAttributes;
   bundleGroupId?: string;
-  coverImage?: Media;
+  coverImage?: MediaImage;
   createdAt: DateType;
   description?: string;
   docs?: MediaPdf[];
@@ -36,11 +36,11 @@ export type Bundle = {
   smartscriptIds: string[];
   tags?: string[];
   themeId?: string;
-  thumbnail?: Media;
+  thumbnail?: MediaImage;
   title: string;
   userId: string;
   userName?: string;
-  video?: Media;
+  video?: MediaVideo;
   generated?: {
     assignmentId?: string;
     assignmentTitle?: string;
