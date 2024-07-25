@@ -37,6 +37,7 @@ export type Bundle = {
   tags?: string[];
   themeId?: string;
   thumbnail?: MediaImage;
+  transferCode?: string;
   title: string;
   userId: string;
   userName?: string;
