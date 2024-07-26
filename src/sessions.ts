@@ -63,6 +63,7 @@ export type SessionHistory = {
 
 export type SessionAllocatedActor = {
   name: string;
+  alias: string;
   members: string[];
   fulfilled?: boolean;
 };
