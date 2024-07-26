@@ -48,7 +48,7 @@ export type MediaImageCrop = {
 
 export type MediaImage = Omit<MediaFile, 'resource_type'> & {
   resource_type: 'image';
-  crop?: MediaImageCrop;
+  crop?: MediaImageCrop | null;
   alt?: string;
 };
 
