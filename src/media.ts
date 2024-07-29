@@ -18,7 +18,7 @@ export type MediaUsedIn = {
   };
 };
 
-type MediaFile = Partial<Omit<UploadApiResponse, 'resource_type'>> & {
+export type MediaFile = Partial<Omit<UploadApiResponse, 'resource_type'>> & {
   resource_type: MediaResourceType;
   usedIn?: MediaUsedIn;
 };
