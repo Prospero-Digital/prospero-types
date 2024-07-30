@@ -21,6 +21,7 @@ export type Smartscript = {
   createdAt: Date;
   thumbnail?: MediaImage;
   themeId?: string;
+  transferCode?: string;
 };
 
 export type SmartscriptPrivate = {
