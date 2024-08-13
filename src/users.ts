@@ -1,4 +1,4 @@
-import type { DashboardSearch } from './dashboard';
+import type { DashboardSearchParams, DashboardSearch } from './dashboard';
 
 export type UserConsent = {
   [key: string]: {
@@ -10,6 +10,7 @@ export type UserConsent = {
 export type UserFilters = {
   bundles?: DashboardSearch;
   assignments?: DashboardSearch;
+  media?: DashboardSearchParams;
 };
 
 export type User = {

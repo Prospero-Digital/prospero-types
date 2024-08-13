@@ -2,7 +2,7 @@ import type { MediaImage } from './media';
 export type DashboardType = 'smartscript' | 'assignment' | 'session';
 export type DashboardAction = 'edit' | 'play' | 'view';
 
-type DashboardSearchParams = {
+export type DashboardSearchParams = {
   filters?: string[];
   sort?: string;
 };
