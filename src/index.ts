@@ -79,7 +79,7 @@ import type {
 } from './stripe';
 
 import type { SubscriptionStatus } from './subscriptions';
-import type { UserConsent, User } from './users';
+import type { UserFilters, UserConsent, User } from './users';
 
 export type {
   Assignment,
@@ -141,6 +141,7 @@ export type {
   TransferData,
   User,
   UserConsent,
+  UserFilters,
   Webhook,
   WebhookAction,
   WebhookDataProps,

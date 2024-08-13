@@ -5,6 +5,11 @@ export type UserConsent = {
   };
 };
 
+export type UserFilters = {
+  smartscripts?: string;
+  assignments?: string;
+};
+
 export type User = {
   avatarUrl?: string;
   authenticated?: boolean;
@@ -18,5 +23,6 @@ export type User = {
   mailchimp?: {
     [key: string]: boolean;
   };
+  filters?: UserFilters;
   producerIds?: string[];
 };
