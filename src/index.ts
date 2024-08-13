@@ -20,7 +20,7 @@ import type {
   DiscordGroup,
 } from './discord';
 
-import type Dashboard from './dashboard';
+import Dashboard, { DashboardSearch } from './dashboard';
 
 import type {
   EmailTemplate,
@@ -98,6 +98,7 @@ export type {
   ChannelSection,
   ChannelSectionVariant,
   Dashboard,
+  DashboardSearch,
   DateType,
   DiscordAction,
   DiscordCollection,

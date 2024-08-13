@@ -1,3 +1,5 @@
+import type { DashboardSearch } from './dashboard';
+
 export type UserConsent = {
   [key: string]: {
     date: number;
@@ -6,8 +8,8 @@ export type UserConsent = {
 };
 
 export type UserFilters = {
-  smartscripts?: string;
-  assignments?: string;
+  bundles?: DashboardSearch;
+  assignments?: DashboardSearch;
 };
 
 export type User = {
