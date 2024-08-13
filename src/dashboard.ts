@@ -3,7 +3,7 @@ export type DashboardType = 'smartscript' | 'assignment' | 'session';
 export type DashboardAction = 'edit' | 'play' | 'view';
 
 type DashboardSearchParams = {
-  filter?: string;
+  filters?: string[];
   sort?: string;
 };
 
