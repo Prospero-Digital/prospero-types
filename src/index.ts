@@ -32,6 +32,8 @@ import type {
 
 import type { GroupUsage, Group, GroupPrivate } from './groups';
 
+import type { LibraryDraft, LibraryLive, LibraryAll } from './library';
+
 import type {
   MediaUsedType,
   MediaFileType,
@@ -112,6 +114,9 @@ export type {
   Group,
   GroupPrivate,
   GroupUsage,
+  LibraryAll,
+  LibraryDraft,
+  LibraryLive,
   Media,
   MediaAudio,
   MediaFileType,
