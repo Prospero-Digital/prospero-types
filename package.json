@@ -1,23 +1,23 @@
 {
   "name": "prospero-types",
-  "version": "1.2.59",
+  "version": "1.2.62",
   "description": "Type descriptions for documents and schemas used in Prospero.",
   "main": "src/index.ts",
   "scripts": {
     "commit": "git add package*",
-    "test": "tsc --noEmit --strict src/index.ts",
+    "test": "tsc",
     "prepare": "husky"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cloudinary": "^2.4.0",
-    "firebase-admin": "^11.11.0",
-    "stripe": "^16.8.0",
-    "typescript": "^5.5.4"
+    "cloudinary": "^2.7.0",
+    "firebase-admin": "^13.4.0",
+    "stripe": "^18.3.0",
+    "typescript": "^5.8.3"
   },
   "devDependencies": {
-    "husky": "^9.1.4",
-    "prettier": "^3.3.3"
+    "husky": "^9.1.7",
+    "prettier": "^3.6.2"
   }
 }
