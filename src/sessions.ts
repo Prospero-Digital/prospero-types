@@ -1,6 +1,8 @@
 import type { Variable } from './render/variables';
 import type { MediaImage } from './media';
 
+export type Target = '_blank' | '_self';
+
 export type SessionStatus = 'expired' | 'created' | 'started' | 'completed';
 
 export type SessionGenerated = {
@@ -30,7 +32,7 @@ export type Session = {
   producerAvatar?: MediaImage;
   notes?: string;
   smartscriptId: string;
-  target?: '_blank' | '_self';
+  target?: Target;
   thumbnail?: MediaImage;
   status: SessionStatus;
   themeId?: string;
@@ -53,12 +55,8 @@ export type SessionPrivate = {
 };
 
 export type SessionHistory = {
-  active: {
-    [actorId: string]: string[];
-  };
-  variables: {
-    [variableId: string]: any;
-  };
+  active: Record<string, string[]>;
+  variables: Record<string, any>;
 };
 
 export type SessionAllocatedActor = {
@@ -78,24 +76,18 @@ export type SessionShared = SessionHistory & {
   assignmentId?: string;
   createdAt: Date;
   description?: string;
-  allocatedActors: {
-    [actorId: string]: SessionAllocatedActor;
-  };
+  allocatedActors: Record<string, SessionAllocatedActor>;
   calibrating?: boolean;
   code: string;
   completed: boolean;
-  definitions: {
-    [variableId: string]: Variable;
-  };
+  definitions: Record<string, Variable>;
   expires?: Date;
   expiry: number;
   extension?: boolean;
   history?: SessionHistory[];
   groupId: string;
   generated?: SessionGenerated;
-  participants: {
-    [userId: string]: SessionParticipant;
-  };
+  participants: Record<string, SessionParticipant>;
   playing: boolean;
   producerId: string;
   smartscriptId: string;
@@ -103,10 +95,8 @@ export type SessionShared = SessionHistory & {
   studentId?: string;
   thumbnail?: MediaImage;
   title: string;
-  target?: '_blank' | '_self';
-  variables?: {
-    [variableId: string]: any;
-  };
+  target?: Target;
+  variables?: Record<string, any>;
   updatedAt?: Date;
   userId: string;
   userName?: string;

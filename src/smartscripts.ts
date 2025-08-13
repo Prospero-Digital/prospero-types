@@ -1,4 +1,5 @@
 import type { MediaImage } from './media';
+import { SessionHistory } from './sessions';
 
 export type Smartscript = {
   id?: string;
@@ -35,4 +36,8 @@ export type SmartscriptPrivate = {
   groupName?: string;
   render: string;
   advanced?: boolean;
+  active?: SessionHistory['active'];
+  variables?: SessionHistory['variables'];
+  history?: SessionHistory[];
+  completed?: boolean;
 };
