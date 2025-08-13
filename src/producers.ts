@@ -59,4 +59,5 @@ export type Producer = Channel & {
     storage?: number;
   };
   stripeAccountActive?: boolean;
+  stripeAccountId?: string;
 };
