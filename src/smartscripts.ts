@@ -34,4 +34,5 @@ export type SmartscriptPrivate = {
   groupId?: string;
   groupName?: string;
   render: string;
+  advanced?: boolean;
 };
