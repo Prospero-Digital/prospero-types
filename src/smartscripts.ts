@@ -40,4 +40,5 @@ export type SmartscriptPrivate = {
   variables?: SessionHistory['variables'];
   history?: SessionHistory[];
   completed?: boolean;
+  previewModes?: 'mobile' | 'laptop' | 'tablet';
 };
