@@ -60,6 +60,7 @@ export type ActionAction = ActionDefaults & {
   opacity?: number;
   blur?: boolean;
   theme?: ActionActionTheme;
+  sfx?: boolean;
 };
 
 export type ActionActor = Omit<ActionAction, 'type'> & {
