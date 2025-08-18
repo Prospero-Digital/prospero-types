@@ -63,6 +63,7 @@ export type SessionAllocatedActor = {
   name: string;
   alias: string;
   members: string[];
+  specific?: number;
   fulfilled?: boolean;
 };
 
