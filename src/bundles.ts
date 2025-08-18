@@ -22,6 +22,7 @@ export type Bundle = {
   createdAt: DateType;
   description?: string;
   docs?: MediaPdf[];
+  empty?: boolean;
   expiry?: number;
   groupId: string;
   groupName?: string;
@@ -33,6 +34,7 @@ export type Bundle = {
   producerId: string;
   producerName?: string;
   producerAvatar?: MediaImage;
+  render?: string;
   smartscriptIds: string[];
   tags?: string[];
   themeId?: string;
