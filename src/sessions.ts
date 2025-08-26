@@ -18,6 +18,7 @@ export type Session = {
   bundleId?: string;
   bundleTitle?: string;
   bundleThumbnail?: MediaImage;
+  bundleDescription?: string;
   code: string;
   completed?: boolean;
   createdAt: Date;

@@ -16,6 +16,12 @@ export type GroupUsage = {
     seats?: GroupUsageStatus;
   };
 };
+export type GroupType =
+  | 'education'
+  | 'school'
+  | 'class'
+  | 'microsoft'
+  | 'google';
 
 export type Group = {
   id?: string;
@@ -40,7 +46,7 @@ export type Group = {
   discord?: DiscordGroup;
   usage?: GroupUsage;
   themeId?: string;
-  groupType?: 'education' | 'school' | 'class' | 'microsoft' | 'google';
+  groupType?: GroupType;
   bundleIds?: string[];
   sections?: Channel;
   subject?: string;
@@ -55,4 +61,9 @@ export type GroupPrivate = Group & {
   declined?: string[];
   notify?: boolean;
   html?: string;
+};
+
+export type GroupInvitation = {
+  variant: GroupVariant;
+  groupType?: GroupType;
 };

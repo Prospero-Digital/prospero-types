@@ -30,7 +30,14 @@ import type {
   EmailRenderProps,
 } from './email';
 
-import type { GroupUsage, Group, GroupPrivate } from './groups';
+import type {
+  GroupType,
+  GroupVariant,
+  GroupUsage,
+  Group,
+  GroupPrivate,
+  GroupInvitation,
+} from './groups';
 
 import type { LibraryDraft, LibraryLive, LibraryAll } from './library';
 
@@ -112,8 +119,11 @@ export type {
   EmailRenderProps,
   EmailTemplate,
   Group,
+  GroupInvitation,
   GroupPrivate,
+  GroupType,
   GroupUsage,
+  GroupVariant,
   LibraryAll,
   LibraryDraft,
   LibraryLive,
