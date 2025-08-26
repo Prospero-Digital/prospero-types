@@ -104,3 +104,7 @@ export type SessionShared = SessionHistory & {
   userName?: string;
   userEmail?: string;
 };
+
+export type SessionState = Omit<SessionShared, 'active'> & {
+  active: string[];
+};

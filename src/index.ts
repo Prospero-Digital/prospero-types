@@ -76,6 +76,7 @@ import type {
   SessionPrivate,
   SessionHistory,
   SessionShared,
+  SessionState,
 } from './sessions';
 
 import type { Smartscript, SmartscriptPrivate } from './smartscripts';
@@ -150,6 +151,7 @@ export type {
   SessionHistory,
   SessionPrivate,
   SessionShared,
+  SessionState,
   SessionStatus,
   Smartscript,
   SmartscriptPrivate,
