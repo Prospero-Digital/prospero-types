@@ -4,6 +4,7 @@ export type Basket = {
   line_items?: Stripe.Checkout.SessionCreateParams.LineItem[];
   updated_at?: number;
   userId: string;
+  redirect?: string;
 };
 
 export type BasketCheckoutProps = Basket & {

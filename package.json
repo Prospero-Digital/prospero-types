@@ -1,6 +1,6 @@
 {
   "name": "prospero-types",
-  "version": "1.2.73",
+  "version": "1.2.74",
   "description": "Type descriptions for documents and schemas used in Prospero.",
   "main": "src/index.ts",
   "scripts": {
