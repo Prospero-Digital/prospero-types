@@ -1,6 +1,7 @@
 import type Stripe from 'stripe';
 
 export type Basket = {
+  id: string;
   line_items?: Stripe.Checkout.SessionCreateParams.LineItem[];
   updated_at?: number;
   userId: string;
