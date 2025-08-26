@@ -13,11 +13,17 @@ export type UserFilters = {
   media?: DashboardSearchParams;
 };
 
+export type UserDiscord = {
+  userId: string;
+  channels?: Record<string, { updated: number; name: string }>;
+};
+
 export type User = {
   avatarUrl?: string;
   authenticated?: boolean;
   consent?: UserConsent;
   devices?: string[];
+  discord?: UserDiscord;
   displayName?: string;
   email?: string;
   groupId?: string;
