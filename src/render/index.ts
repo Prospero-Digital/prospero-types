@@ -32,4 +32,5 @@ export type Render = {
   nodes: {
     [key: string]: RenderNode;
   };
+  template?: boolean;
 };
