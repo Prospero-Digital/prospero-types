@@ -1,5 +1,9 @@
 import type { DashboardSearchParams, DashboardSearch } from './dashboard';
 
+export type Guest = {
+  createdAt: Date;
+};
+
 export type UserConsent = {
   [key: string]: {
     date: number;

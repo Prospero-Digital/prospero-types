@@ -89,7 +89,7 @@ import type {
 } from './stripe';
 
 import type { SubscriptionStatus } from './subscriptions';
-import type { UserFilters, UserConsent, User, UserDiscord } from './users';
+import type { UserFilters, UserConsent, User, UserDiscord, Guest } from './users';
 
 export type {
   Assignment,
@@ -125,6 +125,7 @@ export type {
   GroupType,
   GroupUsage,
   GroupVariant,
+  Guest,
   LibraryAll,
   LibraryDraft,
   LibraryLive,
