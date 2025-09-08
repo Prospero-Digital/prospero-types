@@ -2,6 +2,7 @@ import type { DashboardSearchParams, DashboardSearch } from './dashboard';
 
 export type Guest = {
   createdAt: Date;
+  displayName?: string;
 };
 
 export type UserConsent = {
