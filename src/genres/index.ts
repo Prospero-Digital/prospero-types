@@ -17,13 +17,14 @@ export type GenreType =
   | 'questionnaire'
   | 'wordPairs';
 
-export type GenreScene =
+export type GenreScene = { name: string } & (
   | ScriptWriterScene
   | LightingScene
   | MPaperScene
   | PoseScene
   | QuestionnaireScene
-  | WordPairsScene;
+  | WordPairsScene
+);
 
 export type GenreCue =
   | ScriptWriterCue
