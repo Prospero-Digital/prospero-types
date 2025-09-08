@@ -108,4 +108,5 @@ export type SessionShared = SessionHistory & {
 
 export type SessionState = Omit<SessionShared, 'active'> & {
   active: string[];
+  previewModes?: Record<string, 'mobile' | 'laptop' | 'tablet'>;
 };
