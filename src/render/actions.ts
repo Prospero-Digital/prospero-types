@@ -67,6 +67,7 @@ export type ActionActor = Omit<ActionAction, 'type'> & {
   type: 'actor';
   actors?: string[];
   includeRoot?: boolean;
+  clear?: boolean;
 };
 
 export type ActionEnd = ActionDefaults & {
