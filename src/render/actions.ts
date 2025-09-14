@@ -41,9 +41,8 @@ export type ActionActionButtonColor =
   | 'success';
 
 export type ActionAction = ActionDefaults & {
-  type: 'action';
-  text?: string;
-  media?: MediaUpload;
+  align?: 'left' | 'center' | 'right';
+  blur?: boolean;
   buttons?: {
     labels?: string;
     variant?: ActionActionButtonVariant;
@@ -52,16 +51,19 @@ export type ActionAction = ActionDefaults & {
     hideCheckboxes?: boolean;
   };
   characterId?: string;
-  position?: number;
-  size?: 'small' | 'medium' | 'large';
-  align?: 'left' | 'center' | 'right';
-  invert?: boolean;
-  sticky?: boolean;
-  opacity?: number;
-  blur?: boolean;
-  theme?: ActionActionTheme;
-  sfx?: boolean;
+  datetime?: string;
   direction?: 'incoming' | 'outgoing';
+  invert?: boolean;
+  media?: MediaUpload;
+  opacity?: number;
+  position?: number;
+  sfx?: boolean;
+  size?: 'small' | 'medium' | 'large';
+  sticky?: boolean;
+  text?: string;
+  title?: string;
+  theme?: ActionActionTheme;
+  type: 'action';
 };
 
 export type ActionActor = Omit<ActionAction, 'type'> & {
