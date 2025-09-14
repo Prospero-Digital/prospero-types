@@ -16,7 +16,7 @@ type ActionDefaults = Node & {
   section: 'action';
 };
 
-type ActionActionTheme =
+export type ActionActionTheme =
   | 'default'
   | 'message'
   | 'news'
