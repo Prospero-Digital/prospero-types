@@ -61,6 +61,7 @@ export type ActionAction = ActionDefaults & {
   blur?: boolean;
   theme?: ActionActionTheme;
   sfx?: boolean;
+  direction?: 'incoming' | 'outgoing';
 };
 
 export type ActionActor = Omit<ActionAction, 'type'> & {
