@@ -74,7 +74,7 @@ export type SessionParticipant = {
   avatar?: MediaImage;
 };
 
-export type SessionShared = Partial<SessionHistory> & Partial<{
+export type SessionShared = SessionHistory & {
   id?: 'root';
   assignmentId?: string;
   createdAt: Date;
@@ -104,9 +104,9 @@ export type SessionShared = Partial<SessionHistory> & Partial<{
   userId: string;
   userName?: string;
   userEmail?: string;
-}>;
+};
 
-export type SessionState = Omit<SessionShared, 'active'> & {
+export type SessionState = Partial<Omit<SessionShared, 'active'> & {
   active: string[];
   previewModes?: Record<string, 'mobile' | 'laptop' | 'tablet'>;
-};
+}>;
