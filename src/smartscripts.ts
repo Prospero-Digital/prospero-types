@@ -41,4 +41,5 @@ export type SmartscriptPrivate = {
   history?: SessionHistory[];
   completed?: boolean;
   previewModes?: Record<string, 'mobile' | 'laptop' | 'tablet'>;
+  started?: boolean;
 };
