@@ -32,6 +32,8 @@ export type ActionActionButtonVariant =
   | 'link';
 
 export type ActionActionButtonColor =
+  | 'default'
+  | 'inherit'
   | 'alternate'
   | 'primary'
   | 'secondary'
