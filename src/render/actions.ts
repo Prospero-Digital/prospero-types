@@ -101,7 +101,7 @@ export type ActionVariable = ActionDefaults & {
   type: 'variable';
   content?: string;
   variableId?: string;
-  action?: 'set' | 'calculate' | 'reset' | 'request';
+  action?: 'set' | 'calculate' | 'reset' | 'request' | 'toggle';
 };
 
 export type ActionDecision = Omit<ActionActor, 'type'> & {
