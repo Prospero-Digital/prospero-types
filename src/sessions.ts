@@ -106,7 +106,9 @@ export type SessionShared = SessionHistory & {
   userEmail?: string;
 };
 
-export type SessionState = Partial<Omit<SessionShared, 'active'> & {
-  active: string[];
-  previewModes?: Record<string, 'mobile' | 'laptop' | 'tablet'>;
-}>;
+export type SessionState = Partial<
+  Omit<SessionShared, 'active'> & {
+    active: string[];
+    previewModes?: Record<string, 'mobile' | 'laptop' | 'tablet'>;
+  }
+>;

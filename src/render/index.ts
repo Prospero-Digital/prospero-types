@@ -6,10 +6,13 @@ import type { Trigger } from './triggers';
 import type { Scene } from './scenes';
 import type { Node } from './nodes';
 import type { GenreScene } from '../genres';
+import type { Media } from '../media';
 
 export type Start = Node & {
   section: 'start';
   type: 'start';
+  text?: string;
+  media?: Media;
 };
 
 export type RenderNode = Start | Scene | Action | Trigger;
