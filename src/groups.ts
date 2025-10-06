@@ -9,6 +9,9 @@ export type GroupUsageStatus = 'available' | 'exceeded' | 'nearingQuota';
 export type GroupUsage = {
   storage?: number;
   tokens?: number;
+  current?: number;
+  total?: number;
+  topup?: number;
   seats?: number;
   status?: {
     storage?: GroupUsageStatus;
