@@ -43,6 +43,7 @@ export type ActionActionButtonColor =
   | 'success';
 
 export type ActionAction = ActionDefaults & {
+  activeButton?: number;
   align?: 'left' | 'center' | 'right';
   blur?: boolean;
   buttons?: {
