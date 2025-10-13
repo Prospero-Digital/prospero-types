@@ -1,4 +1,4 @@
-import type { MediaAudio, MediaUpload } from '../media';
+import type { Media, MediaAudio } from '../media';
 import type { Node } from './nodes';
 
 export type ActionType =
@@ -56,7 +56,7 @@ export type ActionAction = ActionDefaults & {
   datetime?: string;
   direction?: 'incoming' | 'outgoing';
   invert?: boolean;
-  media?: MediaUpload;
+  media?: Media;
   opacity?: number;
   position?: number;
   sfx?: boolean;
