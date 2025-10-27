@@ -1,7 +1,7 @@
 import type { DiscordGroup } from './discord';
 import type { MediaImage } from './media';
 import type { Permissions } from './permissions';
-import { Channel } from './producers';
+import { ChannelSection } from './producers';
 
 export type GroupVariant = 'group' | 'bundle' | 'assignment';
 
@@ -51,7 +51,7 @@ export type Group = {
   themeId?: string;
   groupType?: GroupType;
   bundleIds?: string[];
-  sections?: Channel;
+  sections?: ChannelSection[];
   subject?: string;
   message?: string;
   notify?: boolean;
