@@ -4,4 +4,8 @@ export type Node = {
   actorId: string;
   x?: number;
   y?: number;
+  dimensions?: {
+    width: number;
+    height: number;
+  };
 };
