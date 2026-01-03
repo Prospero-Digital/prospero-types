@@ -41,6 +41,7 @@ export type Assignment = {
   assignmentGroupId?: string;
   export?: AssignmentExport;
   studentIdVariant?: StudentIdVariant;
+  render?: string;
 };
 
 export type AssignmentProgressMembers = {

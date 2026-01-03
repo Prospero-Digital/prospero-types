@@ -56,6 +56,7 @@ export type Group = {
   message?: string;
   notify?: boolean;
   html?: string;
+  userId: string;
 };
 
 export type GroupPrivate = Group & {
