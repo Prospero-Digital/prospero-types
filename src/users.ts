@@ -26,6 +26,7 @@ export type UserDiscord = {
 export type User = {
   avatarUrl?: string;
   authenticated?: boolean;
+  customerId?: string;
   consent?: UserConsent;
   devices?: string[];
   discord?: UserDiscord;
