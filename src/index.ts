@@ -90,7 +90,7 @@ import type {
 
 import type { SubscriptionStatus } from './subscriptions';
 import type { UserFilters, UserConsent, User, UserDiscord, Guest } from './users';
-import './functions';
+export * from './functions';
 
 export type {
   Assignment,
