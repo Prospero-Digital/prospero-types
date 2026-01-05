@@ -70,8 +70,10 @@ export type SessionAllocatedActor = {
 };
 
 export type SessionParticipant = {
-  name: string;
+  name?: string;
   avatar?: MediaImage;
+  id: string;
+  actor?: string;
 };
 
 export type SessionShared = SessionHistory & {
