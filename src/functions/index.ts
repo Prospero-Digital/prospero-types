@@ -41,20 +41,26 @@ import {
 } from './smartscripts';
 
 import {
+  ProductsUpdateRequest,
+  ProductsUpdatePermissionsRequest,
   StripeBasketCheckoutRequest,
   StripeBasketCheckoutResponse,
   StripeConnectOnboardRequest,
   StripeConnectOnboardResponse,
+  StripeCreatePortalSessionRequest,
+  StripeCreatePortalSessionResponse,
   StripeCreateSubscriptionCheckoutRequest,
   StripeCreateSubscriptionCheckoutResponse,
   StripeDisconnectOnboardRequest,
 } from './stripe';
 
 import {
-  SubscriptionsCheckRequest,
-  SubscriptionsCheckResponse,
   SubscriptionsAddRequest,
   SubscriptionsAddResponse,
+  SubscriptionsCancelRequest,
+  SubscriptionsCheckRequest,
+  SubscriptionsCheckResponse,
+  SubscriptionsUpdatePermissionsRequest,
 } from './subscriptions';
 
 import { TokensAddHistoryRequest } from './tokens';
@@ -94,17 +100,23 @@ export {
   SmartscriptsCopyRequest,
   SmartscriptsCopyResponse,
   SmartscriptsImportRequest,
+  ProductsUpdateRequest,
+  ProductsUpdatePermissionsRequest,
   StripeBasketCheckoutRequest,
   StripeBasketCheckoutResponse,
   StripeConnectOnboardRequest,
   StripeConnectOnboardResponse,
+  StripeCreatePortalSessionRequest,
+  StripeCreatePortalSessionResponse,
   StripeCreateSubscriptionCheckoutRequest,
   StripeCreateSubscriptionCheckoutResponse,
   StripeDisconnectOnboardRequest,
-  SubscriptionsCheckRequest,
-  SubscriptionsCheckResponse,
   SubscriptionsAddRequest,
   SubscriptionsAddResponse,
+  SubscriptionsCancelRequest,
+  SubscriptionsCheckRequest,
+  SubscriptionsCheckResponse,
+  SubscriptionsUpdatePermissionsRequest,
   TokensAddHistoryRequest,
   TransferApplyRequest,
   TransferApplyResponse,

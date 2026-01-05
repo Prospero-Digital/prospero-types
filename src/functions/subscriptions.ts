@@ -1,6 +1,7 @@
 import Stripe from 'stripe';
 import { Producer } from '../producers';
 import { User } from '../users';
+import { Permissions } from '../permissions';
 
 type SubscriptionsCheckRequest = {
   email: string;
@@ -23,9 +24,21 @@ type SubscriptionsAddRequest = {
 
 type SubscriptionsAddResponse = string;
 
+type SubscriptionsCancelRequest = {
+  subscriptionId: string;
+  now?: boolean;
+};
+
+type SubscriptionsUpdatePermissionsRequest = {
+  ids?: string[];
+  permissions?: Permissions;
+};
+
 export {
-  SubscriptionsCheckRequest,
-  SubscriptionsCheckResponse,
   SubscriptionsAddRequest,
   SubscriptionsAddResponse,
+  SubscriptionsCancelRequest,
+  SubscriptionsCheckRequest,
+  SubscriptionsCheckResponse,
+  SubscriptionsUpdatePermissionsRequest,
 };

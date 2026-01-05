@@ -6,6 +6,7 @@ type TransferApplyRequest = {
   groupId: string;
   groupName: string;
   userId: string;
+  collection: string;
 };
 
 type TransferApplyResponse = {

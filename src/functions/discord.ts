@@ -3,4 +3,5 @@ export type DiscordSendRequest = {
   collection: string;
   moderatorId: string;
   name?: string;
+  channelId?: string;
 };

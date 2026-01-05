@@ -1,16 +1,14 @@
 import type Stripe from 'stripe';
 
-type StripeCreateSubscriptionCheckoutRequest = {
+type StripeCreateSubscriptionCheckoutRequest = Partial<{
+  metadata: Record<string, string>;
+  customer_email: string;
   success_url: string;
   cancel_url: string;
-  customer_email: string;
-  line_items: { price: string; quantity: number }[];
-  metadata: Record<string, string>;
-};
+  line_items: Stripe.Checkout.SessionCreateParams.LineItem[];
+}>;
 
-type StripeCreateSubscriptionCheckoutResponse = {
-  url: string;
-};
+type StripeCreateSubscriptionCheckoutResponse = Stripe.Checkout.Session | null;
 
 type StripeBasketCheckoutRequest = {
   line_items?: Stripe.Checkout.SessionCreateParams.LineItem[];
@@ -20,9 +18,7 @@ type StripeBasketCheckoutRequest = {
   origin: string;
 };
 
-type StripeBasketCheckoutResponse = {
-  url: string;
-};
+type StripeBasketCheckoutResponse = { url: string | null } | null;
 
 type StripeConnectOnboardRequest = {
   url: string;
@@ -39,9 +35,31 @@ type StripeDisconnectOnboardRequest = {
   producerId: string;
 };
 
+type ProductsUpdatePermissionsRequest = {
+  ids?: string[];
+  permissions?: Permissions;
+};
+
+type ProductsUpdateRequest = {
+  price?: Stripe.PriceUpdateParams & { product: string };
+  priceId?: string;
+  product?: Stripe.ProductCreateParams | Stripe.ProductUpdateParams;
+  productId?: string;
+};
+
+type StripeCreatePortalSessionRequest = {
+  customer?: string;
+  return_url?: string;
+};
+type StripeCreatePortalSessionResponse = string | null;
+
 export {
+  ProductsUpdateRequest,
+  ProductsUpdatePermissionsRequest,
   StripeBasketCheckoutRequest,
   StripeBasketCheckoutResponse,
+  StripeCreatePortalSessionRequest,
+  StripeCreatePortalSessionResponse,
   StripeCreateSubscriptionCheckoutRequest,
   StripeCreateSubscriptionCheckoutResponse,
   StripeConnectOnboardRequest,

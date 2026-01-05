@@ -7,9 +7,11 @@ type ApiInitialiseWithPrefixRequest = {
   prefix: string;
 };
 
-type ApiInitialiseWithPrefixResponse = {
+type ApiInitialiseWithPrefixResponse = Partial<{
   apiKey: string;
-};
+  apiKeyShort: string;
+  token: string;
+}>;
 
 export {
   ApiInitialiseRequest,
