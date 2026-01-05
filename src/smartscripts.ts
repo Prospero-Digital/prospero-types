@@ -1,4 +1,3 @@
-import { Bundle } from './bundles';
 import { SessionHistory } from './sessions';
 
 export type Smartscript = {
@@ -42,21 +41,4 @@ export type SmartscriptPrivate = {
   completed?: boolean;
   previewModes?: Record<string, 'mobile' | 'laptop' | 'tablet'>;
   started?: boolean;
-};
-
-export type GeneratedFields = Partial<Smartscript & Bundle> & {
-  render: string;
-};
-
-export type SmartscriptsCopyRequest = GeneratedFields & {
-  docId: string;
-};
-
-export type SmartscriptsCopyResponse = {
-  id: string;
-};
-
-export type SmartscriptsImportRequest = {
-  docId: string;
-  bundleId?: string;
 };

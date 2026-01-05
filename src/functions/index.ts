@@ -35,6 +35,12 @@ import {
 } from './sessions';
 
 import {
+  SmartscriptsCopyRequest,
+  SmartscriptsCopyResponse,
+  SmartscriptsImportRequest,
+} from './smartscripts';
+
+import {
   StripeBasketCheckoutRequest,
   StripeBasketCheckoutResponse,
   StripeConnectOnboardRequest,
@@ -83,6 +89,9 @@ export {
   SessionsFromStudentIdRequest,
   SessionsFromStudentIdResponse,
   SessionsReassignRequest,
+  SmartscriptsCopyRequest,
+  SmartscriptsCopyResponse,
+  SmartscriptsImportRequest,
   StripeBasketCheckoutRequest,
   StripeBasketCheckoutResponse,
   StripeConnectOnboardRequest,
