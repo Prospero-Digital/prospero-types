@@ -1,4 +1,5 @@
 import { SessionHistory } from './sessions';
+import { MediaImage } from './media';
 
 export type Smartscript = {
   id?: string;
