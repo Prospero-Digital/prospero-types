@@ -45,6 +45,8 @@ import {
   StripeBasketCheckoutResponse,
   StripeConnectOnboardRequest,
   StripeConnectOnboardResponse,
+  StripeCreateSubscriptionCheckoutRequest,
+  StripeCreateSubscriptionCheckoutResponse,
   StripeDisconnectOnboardRequest,
 } from './stripe';
 
@@ -96,6 +98,8 @@ export {
   StripeBasketCheckoutResponse,
   StripeConnectOnboardRequest,
   StripeConnectOnboardResponse,
+  StripeCreateSubscriptionCheckoutRequest,
+  StripeCreateSubscriptionCheckoutResponse,
   StripeDisconnectOnboardRequest,
   SubscriptionsCheckRequest,
   SubscriptionsCheckResponse,

@@ -1,5 +1,17 @@
 import type Stripe from 'stripe';
 
+type StripeCreateSubscriptionCheckoutRequest = {
+  success_url: string;
+  cancel_url: string;
+  customer_email: string;
+  line_items: { price: string; quantity: number }[];
+  metadata: Record<string, string>;
+};
+
+type StripeCreateSubscriptionCheckoutResponse = {
+  url: string;
+};
+
 type StripeBasketCheckoutRequest = {
   line_items?: Stripe.Checkout.SessionCreateParams.LineItem[];
   customerId: string;
@@ -30,6 +42,8 @@ type StripeDisconnectOnboardRequest = {
 export {
   StripeBasketCheckoutRequest,
   StripeBasketCheckoutResponse,
+  StripeCreateSubscriptionCheckoutRequest,
+  StripeCreateSubscriptionCheckoutResponse,
   StripeConnectOnboardRequest,
   StripeConnectOnboardResponse,
   StripeDisconnectOnboardRequest,
