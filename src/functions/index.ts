@@ -74,7 +74,7 @@ import {
   UsersAuthDeleteRequest,
 } from './users';
 
-export {
+export type {
   ApiInitialiseRequest,
   ApiInitialiseWithPrefixRequest,
   ApiInitialiseWithPrefixResponse,

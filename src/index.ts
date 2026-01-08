@@ -89,8 +89,14 @@ import type {
 } from './stripe';
 
 import type { SubscriptionStatus } from './subscriptions';
-import type { UserFilters, UserConsent, User, UserDiscord, Guest } from './users';
-export * from './functions';
+import type {
+  UserFilters,
+  UserConsent,
+  User,
+  UserDiscord,
+  Guest,
+} from './users';
+export type * from './functions';
 
 export type {
   Assignment,
