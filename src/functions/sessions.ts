@@ -26,7 +26,7 @@ type SessionsReassignRequest = {
   sessionId: string;
 };
 
-export {
+export type {
   SessionsAddParticipantRequest,
   SessionsFindIdByCodeRequest,
   SessionsFindIdByCodeResponse,

@@ -10,7 +10,7 @@ type ProducerDeleteRequest = {
   docId: string;
 };
 
-export {
+export type {
   GetProducerSupportEmailRequest,
   GetProducerSupportEmailResponse,
   ProducerDeleteRequest,

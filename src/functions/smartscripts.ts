@@ -18,7 +18,7 @@ type SmartscriptsImportRequest = {
   bundleId?: string;
 };
 
-export {
+export type {
   SmartscriptsCopyRequest,
   SmartscriptsCopyResponse,
   SmartscriptsImportRequest,

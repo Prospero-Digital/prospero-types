@@ -15,4 +15,4 @@ type MediaDeleteRequest = {
   level: number;
 };
 
-export { MediaRenameRequest, MediaDeleteRequest };
+export type { MediaRenameRequest, MediaDeleteRequest };

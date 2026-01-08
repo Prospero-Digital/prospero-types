@@ -14,4 +14,4 @@ type TransferApplyResponse = {
   docId: string;
 };
 
-export { TransferApplyRequest, TransferApplyResponse };
+export type { TransferApplyRequest, TransferApplyResponse };

@@ -34,7 +34,7 @@ type SubscriptionsUpdatePermissionsRequest = {
   permissions?: Permissions;
 };
 
-export {
+export type {
   SubscriptionsAddRequest,
   SubscriptionsAddResponse,
   SubscriptionsCancelRequest,

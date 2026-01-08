@@ -34,7 +34,7 @@ type GroupMemberLeaveRequest = {
   groupId: string;
 };
 
-export {
+export type {
   GroupMembersRsvpRequest,
   GroupMembersRsvpResponse,
   GroupsUserLoadResponse,

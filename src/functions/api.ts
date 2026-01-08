@@ -13,7 +13,7 @@ type ApiInitialiseWithPrefixResponse = Partial<{
   token: string;
 }>;
 
-export {
+export type {
   ApiInitialiseRequest,
   ApiInitialiseWithPrefixRequest,
   ApiInitialiseWithPrefixResponse,

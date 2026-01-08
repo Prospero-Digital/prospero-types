@@ -53,7 +53,7 @@ type StripeCreatePortalSessionRequest = {
 };
 type StripeCreatePortalSessionResponse = string | null;
 
-export {
+export type {
   ProductsUpdateRequest,
   ProductsUpdatePermissionsRequest,
   StripeBasketCheckoutRequest,

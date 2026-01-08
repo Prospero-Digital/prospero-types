@@ -18,7 +18,7 @@ type UsersAuthDeleteRequest = {
   id: string;
 };
 
-export {
+export type {
   UsersSwitchAccountRequest,
   UsersSwitchAccountResponse,
   UsersAuthRevokeResponse,
