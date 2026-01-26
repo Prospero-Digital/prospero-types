@@ -10,3 +10,15 @@
 [debug] [2026-01-05T22:10:05.860Z] > authorizing via signed-in user (generamics@gmail.com)
 [debug] [2026-01-05T22:10:05.860Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
 [debug] [2026-01-05T22:10:05.860Z] > authorizing via signed-in user (generamics@gmail.com)
+[debug] [2026-01-26T10:51:41.559Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-26T10:51:41.561Z] > authorizing via signed-in user (generamics@gmail.com)
+[debug] [2026-01-26T10:51:41.573Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-26T10:51:41.573Z] > authorizing via signed-in user (generamics@gmail.com)
+[debug] [2026-01-26T10:51:41.622Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-26T10:51:41.622Z] > authorizing via signed-in user (generamics@gmail.com)
+[debug] [2026-01-26T10:51:41.623Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-26T10:51:41.623Z] > authorizing via signed-in user (generamics@gmail.com)
+[debug] [2026-01-26T10:51:41.646Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-26T10:51:41.646Z] > authorizing via signed-in user (generamics@gmail.com)
+[debug] [2026-01-26T10:51:41.647Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-26T10:51:41.647Z] > authorizing via signed-in user (generamics@gmail.com)

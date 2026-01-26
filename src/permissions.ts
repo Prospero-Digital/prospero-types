@@ -49,6 +49,18 @@ export type Permissions = {
     };
     chat?: boolean;
   };
+  research?: {
+    manage: boolean;
+    level?: number;
+    sharing?: {
+      weblink?: boolean;
+      library?: boolean;
+      channel?: boolean;
+      group?: boolean;
+      user?: boolean;
+    };
+    chat?: boolean;
+  };
   groups?: {
     manage: boolean;
     max?: number;
