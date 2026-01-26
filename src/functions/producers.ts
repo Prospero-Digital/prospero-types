@@ -16,10 +16,6 @@ type SaveProducerAiKeysRequest = ProducerAi & {
   producerId: string;
 };
 
-type SaveProducerAiKeysResponse = {
-  success: boolean;
-};
-
 type GetProducerAiKeysRequest = {
   producerId: string;
 };
@@ -31,7 +27,6 @@ export type {
   GetProducerSupportEmailResponse,
   ProducerDeleteRequest,
   SaveProducerAiKeysRequest,
-  SaveProducerAiKeysResponse,
   GetProducerAiKeysRequest,
   GetProducerAiKeysResponse,
 };

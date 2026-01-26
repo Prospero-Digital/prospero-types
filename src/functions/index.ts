@@ -26,7 +26,6 @@ import {
   GetProducerAiKeysRequest,
   GetProducerAiKeysResponse,
   SaveProducerAiKeysRequest,
-  SaveProducerAiKeysResponse,
 } from './producers';
 
 import {
@@ -100,7 +99,6 @@ export type {
   ProductsUpdatePermissionsRequest,
   ProductsUpdateRequest,
   SaveProducerAiKeysRequest,
-  SaveProducerAiKeysResponse,
   SessionsAddParticipantRequest,
   SessionsFindIdByCodeRequest,
   SessionsFindIdByCodeResponse,
