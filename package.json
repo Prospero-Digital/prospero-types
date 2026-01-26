@@ -1,6 +1,6 @@
 {
   "name": "prospero-types",
-  "version": "1.2.118",
+  "version": "1.2.119",
   "description": "Type descriptions for documents and schemas used in Prospero.",
   "main": "src/index.ts",
   "scripts": {
@@ -14,10 +14,12 @@
     "cloudinary": "^2.7.0",
     "firebase-admin": "^13.4.0",
     "stripe": "^18.3.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "zod": "^4.3.5"
   },
   "devDependencies": {
     "husky": "^9.1.7",
     "prettier": "^3.6.2"
-  }
+  },
+  "packageManager": "pnpm@10.28.1+sha512.7d7dbbca9e99447b7c3bf7a73286afaaf6be99251eb9498baefa7d406892f67b879adb3a1d7e687fc4ccc1a388c7175fbaae567a26ab44d1067b54fcb0d6a316"
 }
