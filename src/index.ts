@@ -80,6 +80,7 @@ import type {
 } from './sessions';
 
 import type { Smartscript, SmartscriptPrivate } from './smartscripts';
+import type { Research } from './research';
 
 import type {
   Webhook,
@@ -155,6 +156,7 @@ export type {
   Permissions,
   Producer,
   Render,
+  Research,
   Session,
   SessionHistory,
   SessionPrivate,
