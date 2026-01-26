@@ -8,7 +8,7 @@ type GroupMembersRsvpRequest = {
   email: string;
 };
 
-type GroupMembersRsvpResponse = Partial<Group[]>;
+type GroupMembersRsvpResponse = Partial<Group>[];
 
 type GroupsUserLoadResponse = {
   currentGroup?: Group;
