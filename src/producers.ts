@@ -38,6 +38,11 @@ export type Channel = {
   sections?: ChannelSection[];
 };
 
+export type ProducerAi = {
+  apiKey?: string;
+  apiProvider?: 'openai' | 'gemini';
+};
+
 export type Producer = Channel & {
   id?: string;
   name: string;

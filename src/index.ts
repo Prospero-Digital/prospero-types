@@ -63,6 +63,7 @@ import type {
 import type { Permissions } from './permissions';
 import type {
   Producer,
+  ProducerAi,
   Channel,
   ChannelSection,
   ChannelSectionVariant,
@@ -155,6 +156,7 @@ export type {
   MediaYoutube,
   Permissions,
   Producer,
+  ProducerAi,
   Render,
   Research,
   Session,
