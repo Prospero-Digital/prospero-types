@@ -3,7 +3,7 @@ import type { MediaImage } from './media';
 import type { Permissions } from './permissions';
 import { ChannelSection } from './producers';
 
-export type GroupVariant = 'group' | 'bundle' | 'assignment';
+export type GroupVariant = 'group' | 'bundle' | 'assignment' | 'research';
 
 export type GroupUsageStatus = 'available' | 'exceeded' | 'nearingQuota';
 export type GroupUsage = {
