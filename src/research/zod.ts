@@ -40,10 +40,6 @@ const research = z.object({
   identity: z.string().meta({
     description: 'The individual or subject being researched in the project.',
   }),
-  url: z.string().optional().meta({
-    description:
-      'URL link to contextualise the individual and/or subject of the research project.',
-  }),
   targetOutcome: z.string().meta({
     description: 'The desired outcome or goal of the research project.',
   }),
@@ -53,6 +49,10 @@ const research = z.object({
   tone: z.string().meta({
     description:
       'The desired tone or style for the research report (e.g., formal, conversational, etc.).',
+  }),
+  teaser: z.string().meta({
+    description:
+      'A brief teaser or summary to entice readers about the research project.',
   }),
   evidence: evidence.meta({
     description:
