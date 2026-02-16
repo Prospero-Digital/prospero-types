@@ -29,6 +29,11 @@ import {
 } from './producers';
 
 import {
+  ResearchCreateProjectRequest,
+  ResearchCreateProjectResponse,
+} from './research';
+
+import {
   SessionsAddParticipantRequest,
   SessionsFindIdByCodeRequest,
   SessionsFindIdByCodeResponse,
@@ -98,6 +103,8 @@ export type {
   ProducerDeleteRequest,
   ProductsUpdatePermissionsRequest,
   ProductsUpdateRequest,
+  ResearchCreateProjectRequest,
+  ResearchCreateProjectResponse,
   SaveProducerAiKeysRequest,
   SessionsAddParticipantRequest,
   SessionsFindIdByCodeRequest,
