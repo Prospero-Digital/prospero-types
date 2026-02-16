@@ -40,7 +40,7 @@ export type Channel = {
 
 export type ProducerAi = {
   apiKey?: string;
-  apiProvider?: 'openai' | 'gemini';
+  apiProvider?: 'openai' | 'google';
 };
 
 export type Producer = Channel & {
