@@ -37,7 +37,7 @@ const research = z.object({
   userId: z.string(),
   userName: z.string().optional(),
   video: z.object({}).optional(),
-  identity: z.string()..meta({
+  identity: z.string().meta({
     description: 'The individual or subject being researched in the project.',
   }),
   url: z.string().optional().meta({
