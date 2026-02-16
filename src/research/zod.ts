@@ -37,7 +37,7 @@ const research = z.object({
   userId: z.string(),
   userName: z.string().optional(),
   video: z.object({}).optional(),
-  identity: z.string().meta({
+  identity: z.string()..meta({
     description: 'The individual or subject being researched in the project.',
   }),
   url: z.string().optional().meta({
@@ -50,7 +50,7 @@ const research = z.object({
   context: z.string().meta({
     description: 'Background information or context for the research project.',
   }),
-  tone: z.string().optional().meta({
+  tone: z.string().meta({
     description:
       'The desired tone or style for the research report (e.g., formal, conversational, etc.).',
   }),
