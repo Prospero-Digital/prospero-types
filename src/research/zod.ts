@@ -3,10 +3,6 @@ import { report } from './reports';
 import { evidence } from './evidence';
 
 export const attributes = z.object({
-  alias: z.string().optional().meta({
-    description:
-      'An alias for the research project - used in the sharable link.',
-  }),
   processing: z.boolean().optional().meta({
     description:
       'Indicates if content for the research project document is currently being generated.',

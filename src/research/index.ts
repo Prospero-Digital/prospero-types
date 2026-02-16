@@ -4,13 +4,8 @@ import type { Evidence } from './evidence';
 import type { Report } from './reports';
 
 export type ResearchAttributes = Partial<{
-  alias: string;
-  channel: boolean;
-  group?: boolean;
-  guest: boolean;
-  hasShared: number;
-  library: boolean;
-  members: number;
+  processing?: boolean;
+  stage?: number;
 }>;
 
 export type Research = {
