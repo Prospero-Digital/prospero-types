@@ -31,6 +31,8 @@ import {
 import {
   ResearchCreateProjectRequest,
   ResearchCreateProjectResponse,
+  ResearchUpdateProjectRequest,
+  ResearchUpdateProjectResponse,
 } from './research';
 
 import {
@@ -105,6 +107,8 @@ export type {
   ProductsUpdateRequest,
   ResearchCreateProjectRequest,
   ResearchCreateProjectResponse,
+  ResearchUpdateProjectRequest,
+  ResearchUpdateProjectResponse,
   SaveProducerAiKeysRequest,
   SessionsAddParticipantRequest,
   SessionsFindIdByCodeRequest,
