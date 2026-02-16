@@ -34,6 +34,7 @@ export type Research = {
   smartscriptIds: string[];
   tags?: string[];
   targetOutcome: string;
+  teaser?: string;
   themeId?: string;
   thumbnail?: MediaImage;
   title: string;
