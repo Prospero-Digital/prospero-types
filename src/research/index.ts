@@ -40,4 +40,5 @@ export type Research = {
   context: string;
   evidence: Evidence[];
   reports: Report[];
+  tone?: string;
 };
