@@ -37,6 +37,7 @@ import type {
   Group,
   GroupPrivate,
   GroupInvitation,
+  GroupScene,
 } from './groups';
 
 import type { LibraryDraft, LibraryLive, LibraryAll } from './library';
@@ -50,6 +51,7 @@ import type {
   MediaStreamingProps,
   MediaGoogleMapsProps,
   MediaImage,
+  MediaFile,
   MediaVideo,
   MediaAudio,
   MediaPdf,
@@ -78,6 +80,7 @@ import type {
   SessionHistory,
   SessionShared,
   SessionState,
+  SessionAllocatedActor,
 } from './sessions';
 
 import type { Smartscript, SmartscriptPrivate } from './smartscripts';
@@ -131,6 +134,7 @@ export type {
   Group,
   GroupInvitation,
   GroupPrivate,
+  GroupScene,
   GroupType,
   GroupUsage,
   GroupVariant,
@@ -140,6 +144,7 @@ export type {
   LibraryLive,
   Media,
   MediaAudio,
+  MediaFile,
   MediaFileType,
   MediaGoogleMap,
   MediaGoogleMapDirections,
@@ -160,6 +165,7 @@ export type {
   Render,
   Research,
   Session,
+  SessionAllocatedActor,
   SessionHistory,
   SessionPrivate,
   SessionShared,
