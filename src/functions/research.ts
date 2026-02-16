@@ -10,6 +10,6 @@ export type ResearchCreateProjectRequest = {
   producerAvatar?: string;
 };
 
-export type ResearchCreateProjectResponse = {
+export type ResearchCreateProjectResponse = Promise<{
   id: string;
-};
+}>;
