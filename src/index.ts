@@ -37,7 +37,6 @@ import type {
   Group,
   GroupPrivate,
   GroupInvitation,
-  GroupScene,
 } from './groups';
 
 import type { LibraryDraft, LibraryLive, LibraryAll } from './library';
@@ -71,7 +70,7 @@ import type {
   ChannelSectionVariant,
 } from './producers';
 
-import type { Render } from './render';
+import type { Render, GenreScene } from './render';
 
 import type {
   SessionStatus,
@@ -131,10 +130,10 @@ export type {
   EmailProps,
   EmailRenderProps,
   EmailTemplate,
+  GenreScene,
   Group,
   GroupInvitation,
   GroupPrivate,
-  GroupScene,
   GroupType,
   GroupUsage,
   GroupVariant,

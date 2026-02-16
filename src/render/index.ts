@@ -37,3 +37,5 @@ export type Render = {
   };
   template?: boolean;
 };
+
+export { GenreScene };
