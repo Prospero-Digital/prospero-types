@@ -15,13 +15,10 @@ const research = z.object({
       members: z.number().optional(),
     })
     .optional(),
-  researchGroupId: z
-    .string()
-    .optional()
-    .meta({
-      description:
-        'The research group identifier used for sharing to specific Prospero users.',
-    }),
+  researchGroupId: z.string().optional().meta({
+    description:
+      'The research group identifier used for sharing to specific Prospero users.',
+  }),
   coverImage: z.object({}).optional(), // Placeholder for MediaImage
   // createdAt: z.date(),
   description: z.string().optional(),
@@ -53,6 +50,10 @@ const research = z.object({
   context: z.string().meta({
     description: 'Background information or context for the research project.',
   }),
+  tone: z.string().optional().meta({
+    description:
+      'The desired tone or style for the research report (e.g., formal, conversational, etc.).',
+  }),
   evidence: evidence.meta({
     description:
       'Evidence setup including field descriptions or starting questions for evidence gathering for the research project.',
@@ -63,4 +64,4 @@ const research = z.object({
   }),
 });
 
-console.log(JSON.stringify(research.toJSONSchema(), null, 2));
+export default research;
