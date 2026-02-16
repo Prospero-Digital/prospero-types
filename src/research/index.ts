@@ -36,7 +36,6 @@ export type Research = {
   userName?: string;
   video?: MediaVideo;
   identity: string;
-  url?: string;
   targetOutcome: string;
   context: string;
   evidence: Evidence[];
