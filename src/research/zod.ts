@@ -3,13 +3,18 @@ import { report } from './reports';
 import { evidence } from './evidence';
 
 export const attributes = z.object({
-  processing: z.boolean().optional().meta({
-    description:
-      'Indicates if content for the research project document is currently being generated.',
-  }),
-  stage: z.number().min(1).max(5).optional().meta({
-    description: 'The current stage of the research project.',
-  }),
+  processing: z.array(
+    z.boolean().optional().meta({
+      description:
+        'Indicates if content for the research project document is currently being generated.',
+    })
+  ),
+  ready: z.array(
+    z.boolean().optional().meta({
+      description:
+        'Indicates if the content for the research project document is ready and available.',
+    })
+  ),
 });
 
 const research = z.object({
@@ -39,8 +44,9 @@ const research = z.object({
       'The research group identifier used for sharing to specific Prospero users.',
   }),
   smartscriptIds: z.array(z.string()),
-  targetOutcome: z.string().meta({
-    description: 'The desired outcome or goal of the research project.',
+  summary: z.string().optional().meta({
+    description:
+      'A concise summary of the research project, highlighting key findings and insights.',
   }),
   teaser: z.string().meta({
     description:

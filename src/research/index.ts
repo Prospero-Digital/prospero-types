@@ -4,8 +4,8 @@ import type { Evidence } from './evidence';
 import type { Report } from './reports';
 
 export type ResearchAttributes = Partial<{
-  processing?: boolean;
-  stage?: number;
+  processing?: boolean[];
+  ready?: boolean[];
 }>;
 
 export type Research = {
@@ -24,7 +24,7 @@ export type Research = {
   reports: Report[];
   researchGroupId?: string;
   smartscriptIds: string[];
-  targetOutcome: string;
+  summary?: string;
   teaser?: string;
   thumbnail?: MediaImage;
   title: string;
