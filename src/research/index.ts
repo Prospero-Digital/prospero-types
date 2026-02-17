@@ -16,7 +16,7 @@ export type Research = {
   attributes?: ResearchAttributes;
   context: string;
   createdAt: DateType;
-  description?: string;
+  description: string;
   groupId: string;
   groupName?: string;
   notes?: string;

@@ -28,7 +28,7 @@ const research = z.object({
     description: 'Background information or context for the research project.',
   }),
   createdAt: z.date(),
-  description: z.string().optional(),
+  description: z.string(),
   groupId: z.string(),
   groupName: z.string().optional(),
   notes: z.string().optional(),
