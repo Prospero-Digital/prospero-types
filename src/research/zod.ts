@@ -4,18 +4,14 @@ import { evidence } from './evidence';
 import { question } from './questions';
 
 export const attributes = z.object({
-  processing: z.array(
-    z.boolean().optional().meta({
-      description:
-        'Indicates if content for the research project document is currently being generated.',
-    })
-  ),
-  ready: z.array(
-    z.boolean().optional().meta({
-      description:
-        'Indicates if the content for the research project document is ready and available.',
-    })
-  ),
+  processing: z.record(z.string(), z.boolean().optional()).meta({
+    description:
+      'Indicates if content for the research project document is currently being generated.',
+  }),
+  ready: z.record(z.string(), z.boolean().optional()).meta({
+    description:
+      'Indicates if the content for the research project document is ready and available.',
+  }),
   evidence: z.number().optional().meta({
     description:
       'The number of evidence items associated with the research project.',
