@@ -7,6 +7,8 @@ export type { ResearchQuestion } from './questions';
 export type ResearchAttributes = Partial<{
   processing?: boolean[];
   ready?: boolean[];
+  evidence?: number;
+  reports?: number;
 }>;
 
 export type Research = {

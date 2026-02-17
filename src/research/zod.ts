@@ -16,6 +16,13 @@ export const attributes = z.object({
         'Indicates if the content for the research project document is ready and available.',
     })
   ),
+  evidence: z.number().optional().meta({
+    description:
+      'The number of evidence items associated with the research project.',
+  }),
+  reports: z.number().optional().meta({
+    description: 'The number of reports associated with the research project.',
+  }),
 });
 
 const research = z.object({
