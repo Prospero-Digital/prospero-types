@@ -1,4 +1,4 @@
-import type { MediaImage, MediaVideo, MediaPdf } from '../media';
+import type { MediaImage } from '../media';
 import type { DateType } from '../common';
 export type { ResearchEvidence } from './evidence';
 export type { ResearchReport } from './reports';
