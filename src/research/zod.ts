@@ -26,20 +26,12 @@ const research = z.object({
   }),
   createdAt: z.date(),
   description: z.string().optional(),
-  evidence: evidence.meta({
-    description:
-      'Evidence setup including field descriptions or starting questions for evidence gathering for the research project.',
-  }),
   groupId: z.string(),
   groupName: z.string().optional(),
   notes: z.string().optional(),
   producerAvatar: z.object({}).optional(), // Placeholder for MediaImage
   producerId: z.string(),
   producerName: z.string().optional(),
-  reports: report.meta({
-    description:
-      'Report structure including section descriptors and prompt instructions for generating the research report.',
-  }),
   researchGroupId: z.string().optional().meta({
     description:
       'The research group identifier used for sharing to specific Prospero users.',
@@ -64,4 +56,5 @@ const research = z.object({
   userName: z.string().optional(),
 });
 
+export { report, evidence, question };
 export default research;
