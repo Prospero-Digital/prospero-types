@@ -3,13 +3,17 @@ import * as z from 'zod';
 const chartAxisType = z.literal(['x', 'y']);
 
 const chartDataMapping = z.object({
-  evidenceId: z.string().meta({ description: 'ID of the specific evidence document' }),
-  questionId: z.string().meta({ description: 'The ID of the question/field to map' }),
+  evidenceId: z
+    .string()
+    .meta({ description: 'ID of the specific evidence document' }),
+  questionId: z
+    .string()
+    .meta({ description: 'The ID of the question/field to map' }),
   axis: chartAxisType,
   // The 'autoAxis' handles the unassigned side (e.g., time or count)
   autoAxis: z.enum(['time', 'frequency', 'sum', 'average']).meta({
-    description: 'Applied to the axis NOT defined by the questionId'
-  })
+    description: 'Applied to the axis NOT defined by the questionId',
+  }),
 });
 
 const reportSectionType = z
@@ -34,14 +38,15 @@ const reportSection = z.object({
 const report = z.object({
   id: z.string(),
   evidenceSourceIds: z.array(z.string()).meta({
-    description: 'The IDs of the evidence documents this report should analyse.'
+    description:
+      'The IDs of the evidence documents this report should analyse.',
   }),
   sections: z.array(reportSection).meta({
     description: 'Array of report sections to be included in the report.',
   }),
 });
 
-export type Report = z.infer<typeof report>;
-export type ReportSection = z.infer<typeof reportSection>;
-export type ReportSectionType = z.infer<typeof reportSectionType>;
+export type ResearchReport = z.infer<typeof report>;
+export type ResearchReportSection = z.infer<typeof reportSection>;
+export type ResearchReportSectionType = z.infer<typeof reportSectionType>;
 export { report, reportSection, reportSectionType };

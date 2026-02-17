@@ -83,7 +83,12 @@ import type {
 } from './sessions';
 
 import type { Smartscript, SmartscriptPrivate } from './smartscripts';
-import type { Research } from './research';
+import type {
+  ResearchEvidence,
+  ResearchReport,
+  ResearchQuestion,
+  Research,
+} from './research';
 
 import type {
   Webhook,
@@ -163,6 +168,9 @@ export type {
   ProducerAi,
   Render,
   Research,
+  ResearchEvidence,
+  ResearchQuestion,
+  ResearchReport,
   Session,
   SessionAllocatedActor,
   SessionHistory,

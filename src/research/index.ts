@@ -1,7 +1,8 @@
 import type { MediaImage, MediaVideo, MediaPdf } from '../media';
 import type { DateType } from '../common';
-import type { Evidence } from './evidence';
-import type { Report } from './reports';
+export type { ResearchEvidence } from './evidence';
+export type { ResearchReport } from './reports';
+export type { ResearchQuestion } from './questions';
 
 export type ResearchAttributes = Partial<{
   processing?: boolean[];
@@ -14,14 +15,12 @@ export type Research = {
   context: string;
   createdAt: DateType;
   description?: string;
-  evidence: Evidence[];
   groupId: string;
   groupName?: string;
   notes?: string;
   producerAvatar?: MediaImage;
   producerId: string;
   producerName?: string;
-  reports: Report[];
   researchGroupId?: string;
   smartscriptIds: string[];
   summary?: string;
