@@ -19,6 +19,10 @@ export const attributes = z.object({
   reports: z.number().optional().meta({
     description: 'The number of reports associated with the research project.',
   }),
+  alias: z.string().optional().meta({
+    description:
+      'A cloud function generated alias using the title of the research project which is used for human readable link sharing.',
+  }),
 });
 
 const research = z.object({
