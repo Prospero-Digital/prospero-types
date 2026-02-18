@@ -27,6 +27,10 @@ const evidenceQuestion = z.object({
     description:
       'The relative position of the question item within the evidence gatherer (e.g. 0 for the first question, 1 for the second, etc.).',
   }),
+  prompt: z.string().optional().meta({
+    description:
+      'An optional prompt to help the ai generate better questions based on the specified framework and context.',
+  }),
 });
 
 const evidenceType = z.literal(['structured', 'discussion']).meta({
