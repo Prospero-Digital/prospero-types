@@ -59,6 +59,10 @@ const evidence = z.object({
     description:
       'A description of the framework to use for generating the evidence gathering questions and/or starter question. If not specified, the Theory of Change will be used by default.',
   }),
+  context: z.string().optional().meta({
+    description:
+      'An overview of the evidence gathering goals, including any relevant background information or specific areas of focus to guide the generation of questions and ensure the collected evidence is aligned with the research objectives.',
+  }),
   researchId: z.string().meta({
     description:
       'The identifier of the research project this evidence gatherer belongs to.',
@@ -73,6 +77,10 @@ const evidence = z.object({
   }),
   description: z.string().optional().meta({
     description: 'Additional details or context about the evidence gatherer.',
+  }),
+  prompt: z.string().optional().meta({
+    description:
+      'An optional prompt to help the ai generate better questions or starter question based on the specified framework and context.',
   }),
 });
 
