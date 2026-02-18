@@ -1,3 +1,8 @@
-import research, { evidence, report, question } from './research/zod';
+import research, {
+  evidence,
+  evidenceQuestion,
+  report,
+  question,
+} from './research/zod';
 
-export { research, evidence, report, question };
+export { research, evidence, evidenceQuestion, report, question };
