@@ -85,6 +85,7 @@ import type {
 import type { Smartscript, SmartscriptPrivate } from './smartscripts';
 import type {
   ResearchEvidence,
+  ResearchEvidenceQuestionItem,
   ResearchEvidenceType,
   ResearchReport,
   ResearchQuestion,
@@ -170,6 +171,7 @@ export type {
   Render,
   Research,
   ResearchEvidence,
+  ResearchEvidenceQuestionItem,
   ResearchEvidenceType,
   ResearchQuestion,
   ResearchReport,
