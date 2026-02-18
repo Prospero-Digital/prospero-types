@@ -60,6 +60,7 @@ const evidence = z.object({
   variant: evidenceType,
   attributes: evidenceAttributes,
   createdAt: z.date(),
+  updatedA: z.date().optional(),
   userId: z.string(),
   userName: z.string().optional(),
   groupId: z.string(),
