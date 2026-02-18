@@ -1,6 +1,6 @@
 import type { MediaImage } from '../media';
 import type { DateType } from '../common';
-export type { ResearchEvidence } from './evidence';
+export type { ResearchEvidence, ResearchEvidenceType } from './evidence';
 export type { ResearchReport } from './reports';
 export type { ResearchQuestion } from './questions';
 
