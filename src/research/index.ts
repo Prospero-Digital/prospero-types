@@ -9,6 +9,7 @@ export type ResearchAttributes = Partial<{
   ready?: Record<string, boolean>;
   evidence?: number;
   reports?: number;
+  alias?: string;
 }>;
 
 export type Research = {
