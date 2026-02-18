@@ -45,6 +45,10 @@ const evidenceAttributes = z.object({
     description:
       'Indicates if the content for the evidence gatherer is ready and available.',
   }),
+  status: z.literal(['draft', 'active', 'archived']).meta({
+    description:
+      'The current status of the evidence gatherer (e.g. "draft", "active", "archived").',
+  }),
 });
 
 const evidence = z.object({
@@ -54,10 +58,6 @@ const evidence = z.object({
   framework: z.string().meta({
     description:
       'A description of the framework to use for generating the evidence gathering questions and/or starter question. If not specified, the Theory of Change will be used by default.',
-  }),
-  status: z.literal(['draft', 'active', 'archived']).meta({
-    description:
-      'The current status of the evidence gatherer (e.g. "draft", "active", "archived").',
   }),
   researchId: z.string().meta({
     description:
