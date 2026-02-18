@@ -59,6 +59,13 @@ const evidence = z.object({
   id: z.string(),
   variant: evidenceType,
   attributes: evidenceAttributes,
+  createdAt: z.date(),
+  description: z.string(),
+  groupId: z.string(),
+  groupName: z.string().optional(),
+  producerAvatar: z.object({}).optional(), // Placeholder for MediaImage
+  producerId: z.string(),
+  producerName: z.string().optional(),
   framework: z.string().meta({
     description:
       'A description of the framework to use for generating the evidence gathering questions and/or starter question. If not specified, the Theory of Change will be used by default.',
