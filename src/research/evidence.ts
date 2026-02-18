@@ -60,7 +60,6 @@ const evidence = z.object({
   variant: evidenceType,
   attributes: evidenceAttributes,
   createdAt: z.date(),
-  description: z.string(),
   groupId: z.string(),
   groupName: z.string().optional(),
   producerAvatar: z.object({}).optional(), // Placeholder for MediaImage
