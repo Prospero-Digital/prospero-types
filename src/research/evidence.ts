@@ -1,218 +1,136 @@
 import * as z from 'zod';
 
+/**
+ * UI Variant Types
+ */
 const evidenceUiType = z
-  .literal([
-    'starter',
-    'slider',
-    'radio',
-    'checkbox',
-    'file',
-    'text',
-    'textarea',
-  ])
-  .meta({
-    description: `
-    - 'starter': For the initial question in a discussion evidence gatherer.
-    - 'slider': For measuring things (e.g. 1-10 satisfaction, or amount of items).
-    - 'radio': For single choice answers (e.g. Yes/No).
-    - 'checkbox': For multiple choice.
-    - 'file': If they should upload a photo or document.
-    - 'text': For open feedback.
-    - 'textarea': For longer open feedback with an optional character limit.
-    `,
-  });
+  .enum(['starter', 'slider', 'radio', 'checkbox', 'file', 'text', 'textarea'])
+  .describe(`
+  - 'starter': Initial question for a discussion.
+  - 'slider': Range input (e.g., 1-10).
+  - 'radio': Single choice (e.g., Yes/No).
+  - 'checkbox': Multiple choice.
+  - 'file': Document or photo upload.
+  - 'text': Short open feedback.
+  - 'textarea': Long feedback with character limits.
+`);
 
-// Develop a conditional schema for the 'options' field in 'evidenceQuestion' based on the value of 'variant'
-// The options field should be a JSON string that can be parsed into different structures depending on the variant:
-const evidenceQuestionOptions = z.discriminatedUnion('variant', [
-  z.object({
-    variant: z.literal('slider'),
-    options: z
-      .object({
-        min: z.number().meta({ description: 'Minimum value for the range' }),
-        max: z.number().meta({ description: 'Maximum value for the range' }),
-        step: z
-          .number()
-          .optional()
-          .meta({ description: 'Step value for the range (default is 1)' }),
-        marks: z
-          .array(
-            z.object({
-              value: z.number().meta({ description: 'Value for the mark' }),
-              label: z.string().meta({ description: 'Label for the mark' }),
-            })
-          )
-          .optional()
-          .meta({ description: 'Optional marks to display on the slider' }),
-      })
-      .meta({
-        description:
-          'A JSON string representing the configuration for a slider input, including min and max values, step, and optional marks.',
-      }),
-  }),
-  z.object({
-    variant: z.union([z.literal('radio'), z.literal('checkbox')]),
-    options: z
-      .object({
-        labels: z
-          .array(z.string())
-          .meta({ description: 'List of option labels to choose from' }),
-        values: z.array(z.union([z.string(), z.number()])).meta({
-          description: 'List of option values corresponding to the labels',
-        }),
-      })
-      .meta({
-        description:
-          'A JSON string representing the options for radio or checkbox inputs, including arrays of labels and corresponding values.',
-      }),
-  }),
-  z.object({
-    variant: z.literal('file'),
-    options: z
-      .object({
-        type: z
-          .union([
-            z.literal('image'),
-            z.literal('video'),
-            z.literal('audio'),
-            z.literal('pdf'),
-          ])
-          .optional()
-          .meta({
-            description:
-              'The type of file to upload, which can be "image", "video", "audio", or "pdf", and is optional to allow for any file type.',
-          }),
-      })
-      .meta({
-        description:
-          'A JSON string representing the configuration for a file input, specifying the type of file to upload.',
-      }),
-  }),
-  z.object({
-    variant: z.literal('text'),
-  }),
-  z.object({
-    variant: z.literal('starter'),
-  }),
-  z.object({
-    variant: z.literal('textarea'),
-    options: z.object({
-      length: z
-        .object({
-          max: z.number().optional().meta({
-            description: 'Maximum character limit for the text input',
-          }),
+/**
+ * Flattened Options Schema
+ * This is easier for LLMs to parse than a nested discriminated union.
+ * We include all possible configuration fields here.
+ */
+const evidenceQuestionOptions = z
+  .object({
+    // Slider fields
+    min: z.number().optional().describe('Minimum value for slider'),
+    max: z.number().optional().describe('Maximum value for slider'),
+    step: z
+      .number()
+      .optional()
+      .describe('Step increment for slider (default 1)'),
+    marks: z
+      .array(
+        z.object({
+          value: z.number(),
+          label: z.string(),
         })
-        .optional()
-        .meta({
-          description:
-            'A JSON string representing the configuration for a textarea input, including an optional maximum character limit.',
-        }),
-    }),
-  }),
-]);
+      )
+      .optional()
+      .describe('Visual marks/labels for slider positions'),
 
-const stringifiedOptions = z
-  .string()
-  .transform((str, ctx) => {
-    try {
-      return JSON.parse(str);
-    } catch (e) {
-      ctx.addIssue({
-        code: 'custom',
-        message: 'Invalid JSON string',
-        fatal: true,
-      });
-      return z.NEVER;
-    }
+    // Radio / Checkbox fields
+    labels: z
+      .array(z.string())
+      .optional()
+      .describe('Display labels for choices'),
+    values: z
+      .array(z.union([z.string(), z.number()]))
+      .optional()
+      .describe('Values corresponding to the labels'),
+
+    // File fields
+    fileType: z
+      .enum(['image', 'video', 'audio', 'pdf'])
+      .optional()
+      .describe('Specific file type constraint'),
+
+    // Textarea fields
+    maxLength: z
+      .number()
+      .optional()
+      .describe('Maximum character limit for textarea'),
   })
-  .pipe(evidenceQuestionOptions);
+  .describe(
+    'Configuration for the UI variant. Only include fields relevant to the chosen variant.'
+  );
 
+/**
+ * Individual Question Schema
+ */
 const evidenceQuestion = z.object({
-  id: z
-    .string()
-    .meta({ description: 'Unique identifier for the question item' }),
-  text: z.string().meta({ description: 'Label for the question item field' }),
+  id: z.string().describe('Unique identifier for the question'),
+  text: z.string().describe('the question label or prompt shown to the user'),
   variant: evidenceUiType,
-  options: stringifiedOptions.meta({
-    description: `
-      A JSON string representing the configuration for the question item, which varies based on the specified UI variant.
-    `,
-  }),
-  delta: z.number().meta({
-    description:
-      'The relative position of the question item within the evidence gatherer (e.g. 0 for the first question, 1 for the second, etc.).',
-  }),
-  prompt: z.string().optional().meta({
-    description:
-      'An optional prompt to help the ai generate better questions based on the specified framework and context.',
-  }),
+  options: evidenceQuestionOptions.optional(),
+  delta: z.number().describe('Position index (0, 1, 2...)'),
+  prompt: z
+    .string()
+    .optional()
+    .describe('AI guidance for generating this specific question content'),
 });
 
-const evidenceType = z.literal(['structured', 'discussion']).meta({
-  description: `
-    - 'structured': Multiple questions presented within a form.
-    - 'discussion': Open-ended discussion with a single starter question.
-  `,
-});
+/**
+ * Metadata and Attributes
+ */
+const evidenceType = z.enum(['structured', 'discussion']).describe(`
+  - 'structured': Multiple questions in a form.
+  - 'discussion': Chat-like interface with a starter question.
+`);
 
 const evidenceAttributes = z.object({
-  processing: z.record(z.string(), z.boolean().optional()).meta({
-    description:
-      'Indicates if content for the evidence gatherer is currently being generated.',
-  }),
-  ready: z.record(z.string(), z.boolean().optional()).meta({
-    description:
-      'Indicates if the content for the evidence gatherer is ready and available.',
-  }),
-  status: z.literal(['draft', 'active', 'archived']).meta({
-    description:
-      'The current status of the evidence gatherer (e.g. "draft", "active", "archived").',
-  }),
+  processing: z.record(z.string(), z.boolean().optional()),
+  ready: z.record(z.string(), z.boolean().optional()),
+  status: z.enum(['draft', 'active', 'archived']),
 });
 
+/**
+ * Main Evidence Schema
+ */
 const evidence = z.object({
   id: z.string(),
   variant: evidenceType,
   attributes: evidenceAttributes,
   createdAt: z.date(),
-  updatedA: z.date().optional(),
+  updatedAt: z.date().optional(),
   userId: z.string(),
   userName: z.string().optional(),
   groupId: z.string(),
   groupName: z.string().optional(),
-  producerAvatar: z.object({}).optional(), // Placeholder for MediaImage
+  producerAvatar: z.any().optional(),
   producerId: z.string(),
   producerName: z.string().optional(),
-  framework: z.string().meta({
-    description:
-      'A description of the framework to use for generating the evidence gathering questions and/or starter question. If not specified, the Theory of Change will be used by default.',
-  }),
-  context: z.string().optional().meta({
-    description:
-      'An overview of the evidence gathering goals, including any relevant background information or specific areas of focus to guide the generation of questions and ensure the collected evidence is aligned with the research objectives.',
-  }),
-  researchId: z.string().meta({
-    description:
-      'The identifier of the research project this evidence gatherer belongs to.',
-  }),
-  smartscriptId: z.string().meta({
-    description:
-      'The data gathering smartscript autogenerated using the items listed in this evidence gatherer.',
-  }),
-  title: z.string().meta({
-    description:
-      'The title of the evidence gatherer, e.g. "Customer Feedback".',
-  }),
-  description: z.string().optional().meta({
-    description: 'Additional details or context about the evidence gatherer.',
-  }),
-  prompt: z.string().optional().meta({
-    description:
-      'An optional prompt to help the ai generate better questions or starter question based on the specified framework and context.',
-  }),
+  framework: z
+    .string()
+    .describe('The research framework to use (e.g., Theory of Change)'),
+  context: z
+    .string()
+    .optional()
+    .describe('Background info to guide the AI question generation'),
+  researchId: z.string(),
+  smartscriptId: z.string(),
+  title: z.string(),
+  description: z.string().optional(),
+  prompt: z
+    .string()
+    .optional()
+    .describe('Global AI prompt for the entire gatherer'),
+  // If you are passing this schema to Vercel AI 'generateObject',
+  // include the questions array here:
+  questions: z.array(evidenceQuestion).optional(),
 });
 
+// Types
 export type ResearchEvidence = z.infer<typeof evidence>;
 export type ResearchEvidenceType = z.infer<typeof evidenceType>;
 export type ResearchEvidenceQuestionItem = z.infer<typeof evidenceQuestion>;
@@ -221,6 +139,7 @@ export type ResearchEvidenceAttributes = z.infer<typeof evidenceAttributes>;
 export type ResearchEvidenceQuestionOptions = z.infer<
   typeof evidenceQuestionOptions
 >;
+
 export {
   evidence,
   evidenceType,

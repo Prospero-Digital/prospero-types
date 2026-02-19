@@ -1,0 +1,12 @@
+[debug] [2026-02-19T14:08:46.019Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-19T14:08:46.020Z] > authorizing via signed-in user (generamics@gmail.com)
+[debug] [2026-02-19T14:08:46.028Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-19T14:08:46.028Z] > authorizing via signed-in user (generamics@gmail.com)
+[debug] [2026-02-19T14:08:46.094Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-19T14:08:46.095Z] > authorizing via signed-in user (generamics@gmail.com)
+[debug] [2026-02-19T14:08:46.095Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-19T14:08:46.095Z] > authorizing via signed-in user (generamics@gmail.com)
+[debug] [2026-02-19T14:08:46.119Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-19T14:08:46.119Z] > authorizing via signed-in user (generamics@gmail.com)
+[debug] [2026-02-19T14:08:46.120Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-19T14:08:46.120Z] > authorizing via signed-in user (generamics@gmail.com)
