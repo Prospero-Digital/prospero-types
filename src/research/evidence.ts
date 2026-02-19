@@ -7,6 +7,7 @@ const evidenceSession = z.object({
   data: z.string().describe('Serialized data collected during the session'),
   createdAt: z.date(),
   updatedAt: z.date().optional(),
+  completed: z.boolean().describe('Whether the session was completed'),
 });
 
 /**
