@@ -1,5 +1,14 @@
 import * as z from 'zod';
 
+const evidenceSession = z.object({
+  id: z.string(),
+  userId: z.string(),
+  userName: z.string().optional(),
+  data: z.string().describe('Serialized data collected during the session'),
+  createdAt: z.date(),
+  updatedAt: z.date().optional(),
+});
+
 /**
  * UI Variant Types
  */
@@ -97,6 +106,12 @@ const evidenceAttributes = z.object({
   ready: z.record(z.string(), z.boolean().optional()),
   status: z.enum(['draft', 'active', 'archived']),
   alias: z.string().describe('A human readable pathname used for URL slugs'),
+  sessionsCompleted: z
+    .number()
+    .describe('Total number of completed evidence collection sessions'),
+  sessionsStarted: z
+    .number()
+    .describe('Total number of evidence collection sessions started'),
 });
 
 /**
@@ -126,6 +141,10 @@ const evidence = z.object({
   smartscriptId: z.string(),
   title: z.string(),
   description: z.string().optional(),
+  introduction: z
+    .string()
+    .optional()
+    .describe('Intro text shown before the question or questions'),
   prompt: z
     .string()
     .optional()
@@ -144,6 +163,7 @@ export type ResearchEvidenceAttributes = z.infer<typeof evidenceAttributes>;
 export type ResearchEvidenceQuestionOptions = z.infer<
   typeof evidenceQuestionOptions
 >;
+export type ResearchEvidenceSession = z.infer<typeof evidenceSession>;
 
 export {
   evidence,
@@ -152,4 +172,5 @@ export {
   evidenceUiType,
   evidenceAttributes,
   evidenceQuestionOptions,
+  evidenceSession,
 };
