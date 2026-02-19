@@ -133,12 +133,7 @@ const evidence = z.object({
 // Types
 export type ResearchEvidence = z.infer<typeof evidence>;
 export type ResearchEvidenceType = z.infer<typeof evidenceType>;
-export type ResearchEvidenceQuestionItem = Omit<
-  z.infer<typeof evidenceQuestion>,
-  'options'
-> & {
-  options?: string;
-};
+export type ResearchEvidenceQuestionItem = z.infer<typeof evidenceQuestion>;
 export type ResearchEvidenceUiType = z.infer<typeof evidenceUiType>;
 export type ResearchEvidenceAttributes = z.infer<typeof evidenceAttributes>;
 export type ResearchEvidenceQuestionOptions = z.infer<
