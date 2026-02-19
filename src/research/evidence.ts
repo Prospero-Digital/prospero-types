@@ -1,17 +1,132 @@
 import * as z from 'zod';
 
 const evidenceUiType = z
-  .literal(['range', 'radio', 'checkbox', 'file', 'text', 'starter'])
+  .literal([
+    'starter',
+    'slider',
+    'radio',
+    'checkbox',
+    'file',
+    'text',
+    'textarea',
+  ])
   .meta({
     description: `
     - 'starter': For the initial question in a discussion evidence gatherer.
-    - 'range': For measuring things (e.g. 1-10 satisfaction, or amount of items).
+    - 'slider': For measuring things (e.g. 1-10 satisfaction, or amount of items).
     - 'radio': For single choice answers (e.g. Yes/No).
     - 'checkbox': For multiple choice.
     - 'file': If they should upload a photo or document.
     - 'text': For open feedback.
+    - 'textarea': For longer open feedback with an optional character limit.
     `,
   });
+
+// Develop a conditional schema for the 'options' field in 'evidenceQuestion' based on the value of 'variant'
+// The options field should be a JSON string that can be parsed into different structures depending on the variant:
+const evidenceQuestionOptions = z.discriminatedUnion('variant', [
+  z.object({
+    variant: z.literal('slider'),
+    options: z
+      .object({
+        min: z.number().meta({ description: 'Minimum value for the range' }),
+        max: z.number().meta({ description: 'Maximum value for the range' }),
+        step: z
+          .number()
+          .optional()
+          .meta({ description: 'Step value for the range (default is 1)' }),
+        marks: z
+          .array(
+            z.object({
+              value: z.number().meta({ description: 'Value for the mark' }),
+              label: z.string().meta({ description: 'Label for the mark' }),
+            })
+          )
+          .optional()
+          .meta({ description: 'Optional marks to display on the slider' }),
+      })
+      .meta({
+        description:
+          'A JSON string representing the configuration for a slider input, including min and max values, step, and optional marks.',
+      }),
+  }),
+  z.object({
+    variant: z.union([z.literal('radio'), z.literal('checkbox')]),
+    options: z
+      .object({
+        labels: z
+          .array(z.string())
+          .meta({ description: 'List of option labels to choose from' }),
+        values: z.array(z.union([z.string(), z.number()])).meta({
+          description: 'List of option values corresponding to the labels',
+        }),
+      })
+      .meta({
+        description:
+          'A JSON string representing the options for radio or checkbox inputs, including arrays of labels and corresponding values.',
+      }),
+  }),
+  z.object({
+    variant: z.literal('file'),
+    options: z
+      .object({
+        type: z
+          .union([
+            z.literal('image'),
+            z.literal('video'),
+            z.literal('audio'),
+            z.literal('pdf'),
+          ])
+          .optional()
+          .meta({
+            description:
+              'The type of file to upload, which can be "image", "video", "audio", or "pdf", and is optional to allow for any file type.',
+          }),
+      })
+      .meta({
+        description:
+          'A JSON string representing the configuration for a file input, specifying the type of file to upload.',
+      }),
+  }),
+  z.object({
+    variant: z.literal('text'),
+  }),
+  z.object({
+    variant: z.literal('starter'),
+  }),
+  z.object({
+    variant: z.literal('textarea'),
+    options: z.object({
+      length: z
+        .object({
+          max: z.number().optional().meta({
+            description: 'Maximum character limit for the text input',
+          }),
+        })
+        .optional()
+        .meta({
+          description:
+            'A JSON string representing the configuration for a textarea input, including an optional maximum character limit.',
+        }),
+    }),
+  }),
+]);
+
+const stringifiedOptions = z
+  .string()
+  .transform((str, ctx) => {
+    try {
+      return JSON.parse(str);
+    } catch (e) {
+      ctx.addIssue({
+        code: 'custom',
+        message: 'Invalid JSON string',
+        fatal: true,
+      });
+      return z.NEVER;
+    }
+  })
+  .pipe(evidenceQuestionOptions);
 
 const evidenceQuestion = z.object({
   id: z
@@ -19,9 +134,10 @@ const evidenceQuestion = z.object({
     .meta({ description: 'Unique identifier for the question item' }),
   text: z.string().meta({ description: 'Label for the question item field' }),
   variant: evidenceUiType,
-  options: z.array(z.string()).optional().meta({
-    description:
-      'Required for radio/checkbox. For range, provide two numbers: [min, max]. Empty for text/file/starter.',
+  options: stringifiedOptions.meta({
+    description: `
+      A JSON string representing the configuration for the question item, which varies based on the specified UI variant.
+    `,
   }),
   delta: z.number().meta({
     description:
@@ -102,10 +218,14 @@ export type ResearchEvidenceType = z.infer<typeof evidenceType>;
 export type ResearchEvidenceQuestionItem = z.infer<typeof evidenceQuestion>;
 export type ResearchEvidenceUiType = z.infer<typeof evidenceUiType>;
 export type ResearchEvidenceAttributes = z.infer<typeof evidenceAttributes>;
+export type ResearchEvidenceQuestionOptions = z.infer<
+  typeof evidenceQuestionOptions
+>;
 export {
   evidence,
   evidenceType,
   evidenceQuestion,
   evidenceUiType,
   evidenceAttributes,
+  evidenceQuestionOptions,
 };

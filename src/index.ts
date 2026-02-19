@@ -89,6 +89,9 @@ import type {
   ResearchEvidenceType,
   ResearchReport,
   ResearchQuestion,
+  ResearchAttributes,
+  ResearchEvidenceQuestionOptions,
+  ResearchEvidenceUiType,
   Research,
 } from './research';
 
@@ -170,9 +173,12 @@ export type {
   ProducerAi,
   Render,
   Research,
+  ResearchAttributes,
   ResearchEvidence,
   ResearchEvidenceQuestionItem,
+  ResearchEvidenceQuestionOptions,
   ResearchEvidenceType,
+  ResearchEvidenceUiType,
   ResearchQuestion,
   ResearchReport,
   Session,

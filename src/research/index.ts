@@ -4,6 +4,9 @@ export type {
   ResearchEvidence,
   ResearchEvidenceType,
   ResearchEvidenceQuestionItem,
+  ResearchEvidenceUiType,
+  ResearchEvidenceAttributes,
+  ResearchEvidenceQuestionOptions,
 } from './evidence';
 export type { ResearchReport } from './reports';
 export type { ResearchQuestion } from './questions';

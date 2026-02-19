@@ -1,6 +1,10 @@
 import * as z from 'zod';
 import { report } from './reports';
-import { evidence, evidenceQuestion } from './evidence';
+import {
+  evidence,
+  evidenceQuestion,
+  evidenceQuestionOptions,
+} from './evidence';
 import { question } from './questions';
 
 export const attributes = z.object({
@@ -63,5 +67,11 @@ const research = z.object({
   userName: z.string().optional(),
 });
 
-export { report, evidence, evidenceQuestion, question };
+export {
+  report,
+  evidence,
+  evidenceQuestion,
+  evidenceQuestionOptions,
+  question,
+};
 export default research;
