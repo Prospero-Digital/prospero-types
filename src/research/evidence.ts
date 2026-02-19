@@ -31,10 +31,6 @@ const evidenceQuestion = z.object({
     description:
       'An optional prompt to help the ai generate better questions based on the specified framework and context.',
   }),
-  processing: z.boolean().optional().meta({
-    description:
-      'Indicates if content for the question item is currently being generated.',
-  }),
 });
 
 const evidenceType = z.literal(['structured', 'discussion']).meta({
