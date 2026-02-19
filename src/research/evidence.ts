@@ -96,6 +96,7 @@ const evidenceAttributes = z.object({
   processing: z.record(z.string(), z.boolean().optional()),
   ready: z.record(z.string(), z.boolean().optional()),
   status: z.enum(['draft', 'active', 'archived']),
+  alias: z.string().describe('A human readable pathname used for URL slugs'),
 });
 
 /**
