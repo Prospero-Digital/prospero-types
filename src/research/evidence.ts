@@ -60,6 +60,10 @@ const evidenceQuestionOptions = z
       .number()
       .optional()
       .describe('Maximum character limit for textarea'),
+    placeholder: z
+      .string()
+      .optional()
+      .describe('Placeholder text for input fields'),
   })
   .describe(
     'Configuration for the UI variant. Only include fields relevant to the chosen variant.'
