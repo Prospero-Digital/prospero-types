@@ -92,6 +92,7 @@ import type {
   ResearchAttributes,
   ResearchEvidenceQuestionOptions,
   ResearchEvidenceUiType,
+  ResearchEvidenceSession,
   Research,
 } from './research';
 
@@ -177,6 +178,7 @@ export type {
   ResearchEvidence,
   ResearchEvidenceQuestionItem,
   ResearchEvidenceQuestionOptions,
+  ResearchEvidenceSession,
   ResearchEvidenceType,
   ResearchEvidenceUiType,
   ResearchQuestion,

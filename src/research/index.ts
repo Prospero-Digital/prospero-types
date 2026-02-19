@@ -7,6 +7,7 @@ export type {
   ResearchEvidenceUiType,
   ResearchEvidenceAttributes,
   ResearchEvidenceQuestionOptions,
+  ResearchEvidenceSession,
 } from './evidence';
 export type { ResearchReport } from './reports';
 export type { ResearchQuestion } from './questions';
