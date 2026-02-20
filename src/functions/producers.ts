@@ -26,7 +26,7 @@ type GetProducerAiProviderRequest = {
   producerId: string;
 };
 
-type GetProducerAiProviderResponse = ProducerAi['apiProvider'];
+type GetProducerAiProviderResponse = { apiProvider: ProducerAi['apiProvider'] };
 
 export type {
   GetProducerSupportEmailRequest,
