@@ -22,6 +22,12 @@ type GetProducerAiKeysRequest = {
 
 type GetProducerAiKeysResponse = ProducerAi;
 
+type GetProducerAiProviderRequest = {
+  producerId: string;
+};
+
+type GetProducerAiProviderResponse = ProducerAi['apiProvider'];
+
 export type {
   GetProducerSupportEmailRequest,
   GetProducerSupportEmailResponse,
@@ -29,4 +35,6 @@ export type {
   SaveProducerAiKeysRequest,
   GetProducerAiKeysRequest,
   GetProducerAiKeysResponse,
+  GetProducerAiProviderRequest,
+  GetProducerAiProviderResponse,
 };

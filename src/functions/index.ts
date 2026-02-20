@@ -26,6 +26,8 @@ import {
   GetProducerAiKeysRequest,
   GetProducerAiKeysResponse,
   SaveProducerAiKeysRequest,
+  GetProducerAiProviderRequest,
+  GetProducerAiProviderResponse,
 } from './producers';
 
 import {
@@ -92,6 +94,8 @@ export type {
   DiscordSendRequest,
   GetProducerAiKeysRequest,
   GetProducerAiKeysResponse,
+  GetProducerAiProviderRequest,
+  GetProducerAiProviderResponse,
   GetProducerSupportEmailRequest,
   GetProducerSupportEmailResponse,
   GroupMemberLeaveRequest,
