@@ -9,7 +9,13 @@ export type {
   ResearchEvidenceQuestionOptions,
   ResearchEvidenceSession,
 } from './evidence';
-export type { ResearchReport } from './reports';
+export type {
+  ResearchReport,
+  ResearchReportSection,
+  ResearchReportSectionType,
+  ResearchReportAttributes,
+  ResearchReportSectionOptions,
+} from './reports';
 export type { ResearchQuestion } from './questions';
 
 export type ResearchAttributes = Partial<{

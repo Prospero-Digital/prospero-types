@@ -3,6 +3,8 @@ import research, {
   evidenceQuestion,
   evidenceQuestionOptions,
   report,
+  reportSection,
+  reportSectionOptions,
   question,
 } from './research/zod';
 
@@ -12,5 +14,7 @@ export {
   evidenceQuestion,
   evidenceQuestionOptions,
   report,
+  reportSection,
+  reportSectionOptions,
   question,
 };

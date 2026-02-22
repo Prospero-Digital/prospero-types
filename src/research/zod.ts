@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import { report } from './reports';
+import { report, reportSection, reportSectionOptions } from './reports';
 import {
   evidence,
   evidenceQuestion,
@@ -57,6 +57,8 @@ const research = z.object({
 
 export {
   report,
+  reportSection,
+  reportSectionOptions,
   evidence,
   evidenceQuestion,
   evidenceQuestionOptions,
