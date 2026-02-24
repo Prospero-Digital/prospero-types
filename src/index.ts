@@ -1,3 +1,5 @@
+import type { AiUrlContext } from './aiCache';
+
 import type {
   AssignmentExportType,
   AssignmentExport,
@@ -118,6 +120,7 @@ import type {
 export type * from './functions';
 
 export type {
+  AiUrlContext,
   Assignment,
   AssignmentExport,
   AssignmentExportType,
